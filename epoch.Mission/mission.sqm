@@ -36,8 +36,6 @@ class Mission
 	addOnsAuto[]=
 	{
 		"a3_epoch_config",
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
 		"napf"
 	};
 	randomSeed=12032465;
@@ -63,7 +61,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=103;
+		items=100;
 		class Item0
 		{
 			side="CIV";
@@ -2064,70 +2062,10 @@ class Mission
 				};
 			};
 		};
-		class Item100
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={15201.051,16.402887,16238.091};
-					azimut=-35.270802;
-					id=100;
-					side="CIV";
-					vehicle="C_man_pilot_F";
-					leader=1;
-					skill=0.60000002;
-					text="dude1";
-					init="dude1 addAction [""Cessna for 600 Krypto ?"", ""custom\8.sqf""]; dude1 addAction [""Cessna Watermodel for 800 Krypto ?"", ""custom\9.sqf""]; dude1 addAction [""Irfrit for 1200 Krypto ?"", ""custom\1.sqf""]; dude1 addAction [""Strider for 1400 Krypto ?"", ""custom\2.sqf""]; dude1 addAction [""Offroad HMG for 4500 Krypto ?"", ""custom\3.sqf""];  dude1 allowDammage false;  dude1 enableSimulation true; dude1 disableAI 'MOVE';";
-				};
-			};
-		};
-		class Item101
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5127.5508,71.588974,4761.4644};
-					azimut=260.405;
-					id=101;
-					side="CIV";
-					vehicle="C_man_pilot_F";
-					leader=1;
-					skill=0.60000002;
-					text="dude2";
-					init="dude2 addAction [""Cessna for 600 Krypto ?"", ""custom\8.sqf""]; dude2 addAction [""Cessna Watermodel for 800 Krypto ?"", ""custom\9.sqf""]; dude2 addAction [""Irfrit for 1200 Krypto ?"", ""custom\1.sqf""]; dude2 addAction [""Strider for 1400 Krypto ?"", ""custom\2.sqf""]; dude2 addAction [""Offroad HMG for 4500 Krypto ?"", ""custom\3.sqf""];  dude2 allowDammage false;  dude2 enableSimulation true; dude2 disableAI 'MOVE';";
-				};
-			};
-		};
-		class Item102
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={18152.832,134.86737,1937.3418};
-					azimut=27.878;
-					id=102;
-					side="CIV";
-					vehicle="C_man_pilot_F";
-					leader=1;
-					skill=0.60000002;
-					text="dude3";
-					init="dude3 addAction [""Cessna for 600 Krypto ?"", ""custom\8.sqf""]; dude3 addAction [""Cessna Watermodel for 800 Krypto ?"", ""custom\9.sqf""]; dude3 addAction [""Irfrit for 1200 Krypto ?"", ""custom\1.sqf""]; dude3 addAction [""Strider for 1400 Krypto ?"", ""custom\2.sqf""]; dude3 addAction [""Offroad HMG for 4500 Krypto ?"", ""custom\3.sqf""];  dude3 allowDammage false;  dude3 enableSimulation true; dude3 disableAI 'MOVE';";
-				};
-			};
-		};
 	};
 	class Markers
 	{
-		items=44;
+		items=23;
 		class Item0
 		{
 			position[]={10240,0,10240};
@@ -2150,113 +2088,77 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={16573.26,-9.7614247e-006,-247.15576};
-			name="a";
-			text="GBR Server / Napf";
-			type="mil_dot";
-			colorName="ColorWhite";
-		};
-		class Item4
-		{
-			position[]={206.86743,0.21961507,-517.17334};
-			name="centeroftheworld";
-			type="Empty";
-			colorName="ColorBlack";
-		};
-		class Item5
-		{
-			position[]={5127.2505,71.588974,4761.521};
-			name="laden1";
-			type="mil_dot";
-			colorName="ColorYellow";
-		};
-		class Item6
-		{
-			position[]={15201.294,16.402887,16238.179};
-			name="laden2";
-			type="mil_dot";
-			colorName="ColorYellow";
-		};
-		class Item7
-		{
-			position[]={18155.438,134.93291,1937.8296};
-			name="laden3";
-			type="mil_dot";
-			colorName="ColorYellow";
-		};
-		class Item8
-		{
 			position[]={16681.256,8.2901468,17293.984};
 			name="sec1";
 			type="Empty";
 		};
-		class Item9
+		class Item4
 		{
 			position[]={17048.012,36.944916,17523.324};
 			name="sec2";
 			type="Empty";
 		};
-		class Item10
+		class Item5
 		{
 			position[]={17099.77,41.793503,17752.74};
 			name="sec3";
 			type="Empty";
 		};
-		class Item11
+		class Item6
 		{
 			position[]={17189.295,41.057808,18064.926};
 			name="sec4";
 			type="Empty";
 		};
-		class Item12
+		class Item7
 		{
 			position[]={16580.955,40.083252,18214.617};
 			name="sec5";
 			type="Empty";
 		};
-		class Item13
+		class Item8
 		{
 			position[]={16322.143,40.083252,18452.973};
 			name="sec6";
 			type="Empty";
 		};
-		class Item14
+		class Item9
 		{
 			position[]={16068.01,87.250237,18767.947};
 			name="sec7";
 			type="Empty";
 		};
-		class Item15
+		class Item10
 		{
 			position[]={17135.768,5.0031371,18779.963};
 			name="sec8";
 			type="Empty";
 		};
-		class Item16
+		class Item11
 		{
 			position[]={16599.594,21.384195,18582.307};
 			name="sec9";
 			type="Empty";
 		};
-		class Item17
+		class Item12
 		{
 			position[]={15691.678,39.830753,19813.453};
 			name="sec10";
 			type="Empty";
 		};
-		class Item18
+		class Item13
 		{
 			position[]={17356.842,16.765839,17040.469};
 			name="sec11";
 			type="Empty";
 		};
-		class Item19
+		class Item14
 		{
 			position[]={16694.924,26.588028,17518.006};
 			name="sec12";
 			type="Empty";
 		};
-		class Item20
+		class Item15
 		{
 			position[]={16527.129,34.092304,18426.314};
 			name="GBR";
@@ -2264,183 +2166,47 @@ class Mission
 			type="mil_dot";
 			colorName="ColorRed";
 		};
-		class Item21
+		class Item16
 		{
 			position[]={16529.719,34.364796,18420.574};
 			name="sec_center";
 			type="Empty";
 		};
-		class Item22
+		class Item17
 		{
 			position[]={16521.629,22.132986,17917.189};
 			name="sec13";
 			type="Empty";
 		};
-		class Item23
+		class Item18
 		{
 			position[]={16209.065,52.750305,18607.236};
 			name="sec14";
 			type="Empty";
 		};
-		class Item24
+		class Item19
 		{
 			position[]={15712.135,26.861288,18919.336};
 			name="sec15";
 			type="Empty";
 		};
-		class Item25
+		class Item20
 		{
 			position[]={15592.157,38.17382,19322.428};
 			name="sec16";
 			type="Empty";
 		};
-		class Item26
+		class Item21
 		{
 			position[]={16081.122,27.827427,19622.629};
 			name="sec17";
 			type="Empty";
 		};
-		class Item27
+		class Item22
 		{
 			position[]={16756.855,20.883478,19155.645};
 			name="sec18";
 			type="Empty";
-		};
-		class Item28
-		{
-			position[]={17767.219,0.011958167,18332.756};
-			name="sec19";
-			type="Empty";
-		};
-		class Item29
-		{
-			position[]={17773.072,-0.098285891,18218.867};
-			name="sec20";
-			type="Empty";
-		};
-		class Item30
-		{
-			position[]={17930.553,0.13207717,17526.336};
-			name="sec21";
-			type="Empty";
-		};
-		class Item31
-		{
-			position[]={17941.186,0.32375151,17489.725};
-			name="sec22";
-			type="Empty";
-		};
-		class Item32
-		{
-			position[]={17919.688,0.10625159,17499.881};
-			name="sec23";
-			type="Empty";
-		};
-		class Item33
-		{
-			position[]={17916.467,0.07263837,17543.301};
-			name="sec24";
-			type="Empty";
-		};
-		class Item34
-		{
-			position[]={17942.646,0.26987028,17492.09};
-			name="sec25";
-			type="Empty";
-		};
-		class Item35
-		{
-			position[]={17916.869,0.24212128,17520.018};
-			name="sec26";
-			type="Empty";
-		};
-		class Item36
-		{
-			position[]={17938.475,0.0087480247,17512.068};
-			name="sec27";
-			type="Empty";
-		};
-		class Item37
-		{
-			position[]={17933.031,0.00072103739,17517.455};
-			name="sec28";
-			type="Empty";
-		};
-		class Item38
-		{
-			position[]={17930.541,0.18517391,17491.633};
-			name="sec29";
-			type="Empty";
-		};
-		class Item39
-		{
-			position[]={17921.717,-0.090415634,17528.031};
-			name="sec33";
-			type="Empty";
-		};
-		class Item40
-		{
-			position[]={17912.592,0.25677189,17522.275};
-			name="sec31";
-			type="Empty";
-		};
-		class Item41
-		{
-			position[]={17942.291,0.38875359,17526.566};
-			name="sec32";
-			type="Empty";
-		};
-		class Item42
-		{
-			position[]={17946.533,0.18700162,17510.805};
-			name="sec34";
-			type="Empty";
-		};
-		class Item43
-		{
-			position[]={17922.324,0.37777984,17505.857};
-			name="sec30";
-			type="Empty";
-		};
-	};
-	class Sensors
-	{
-		items=2;
-		class Item0
-		{
-			position[]={3464.2517,4.2824988,4149.1001};
-			a=1;
-			b=1;
-			angle=-36.848801;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="SPAWNPOINT";
-			expCond="(player distance SPAWNPOINT) < 1;";
-			expActiv="inSpawnPoint = true;";
-			expDesactiv="inSpawnPoint = false;";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={3466.2517,4.268528,4150.1001};
-			a=1;
-			b=1;
-			angle=-36.848801;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="SPAWNPOINT2";
-			expCond="(player distance SPAWNPOINT2) < 1;";
-			expActiv="inSpawnPoint2 = true;";
-			expDesactiv="inSpawnPoint2 = false;";
-			class Effects
-			{
-			};
 		};
 	};
 };
