@@ -33,6 +33,7 @@ Include:
 
 - Create 18 marker in your Mission (Markername: sec1,sec2,sec3,sec4,sec5,sec6,sec7,sec8,sec9,sec10,sec11,sec12,sec13,sec14,sec15,sec16,sec17,sec18) markertype=Empty or look in the mission.sqm example !
   On every marker 4 Soldiers + 1 Random will be spawn, so 72-90 Soldiers will spawn there, if 72-90 are to much, then use only 12 markers or so...
+  The AI patrol in a 300 Meter radius, so every 300 Meter radius one marker (change the radius in the fn_init)
   Check the example epoch.Mission or the picture
 
 
