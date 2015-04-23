@@ -2,9 +2,11 @@
 	File: spawncrates.sqf
 	Author: NedFox [TZW]
 	Description: Custom Crates, randomly placed around a marker.
-	GBR Suppe edition	
+	Edit: GBR Suppe edition	
 */
 if (isServer) then {
+
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 
 _numberofcrates = 3; 								// this is the number of crates that you want to spawn
 _spawnCenter = [16529.719,18420.574,34.364796]; 	// Example : This is the center around which the crates will spawn, Sector B island on Tavi. //Coords Sector Center
@@ -16,6 +18,9 @@ _water = 0;			// water mode (Number)	0: cannot be in water , 1: can either be in
 _shoremode = 0; 	// 0: does not have to be at a shore , 1: must be at a shore
 _marker = false; 	// Draw a green circle in which the crate will be spawned randomly
 _markersize = 5; 	// Radius of the marker in meters
+
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+
 
 diag_log format['***[Sector] Starting Spawncrates.sqf***'];
 
@@ -42,6 +47,8 @@ for "_i" from 1 to _numberofcrates do
     clearItemCargoGlobal _box;
 	_box setVariable ["permaLoot",true];							//stay until reset
 	_box allowDamage false;											// Prevent boxes to explode when spawning
+	
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 	
 	_box addWeaponCargoGlobal ["m107Tan_EPOCH",  				(random 1)];
 	_box addWeaponCargoGlobal ["AKM_EPOCH", 					(random 1)];
@@ -78,5 +85,7 @@ for "_i" from 1 to _numberofcrates do
 	_box addBackpackCargoGlobal ["B_Carryall_cbr", 				(random 1)];
 	_box addBackpackCargoGlobal ["B_Parachute", 				(random 1)];
 	_box addBackpackCargoGlobal ["B_Carryall_ocamo",  			(random 1)];
+	
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
   }
 };

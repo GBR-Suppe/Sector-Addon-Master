@@ -1,5 +1,12 @@
-//ARMA3Alpha function LV_fnc_fullAirVehicle v1.0 - by SPUn / lostvar
-//Spawns random vehicle full of random units and returns driver 
+/*
+	ARMA3Alpha function LV_fnc_fullAirVehicle v1.0 - by SPUn / lostvar
+	Spawns random vehicle full of random units and returns driver 
+	
+	File: 		Sector_addon fullair
+	Author: 	GBR Suppe
+	Update: 	23.04.2015
+	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
+*/
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_INDhq","_INDgrp","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_pos1","_veh1","_vehSpots","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];
 _pos = _this select 0;
 _side = _this select 1;

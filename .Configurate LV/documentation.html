@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A3Beta - AI Spawn Script Pack v0.90</title>
+<style type="text/css">
+<!--
+body {
+	font: 80%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #000;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ ADB96E*/
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds all other divs ~~ */
+.container {
+	width: 100%;
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout ADB96E */
+	overflow: hidden; /* this declaration makes the .container understand where the floated columns within ends and contain them */
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 210px;
+	background: #000;
+	padding-bottom: 10px;
+}
+.content {
+
+	padding: 10px 0;
+	width: 70%;
+	float: left;
+}
+
+.content i {
+	color: #FFF;
+	background:#666;	
+}
+
+.content hr {
+	height: 5px;
+	width: 105%;
+	color: #000;
+	background-color: #000;	
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ 360 */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/*.content pre {
+	display:block;
+	white-space:pre-wrap;
+	background-color: #333;
+	color: #FFF;
+	font-size: 12px;
+}*/
+pre{
+	font-size: 12px;
+	/*white-space:pre-wrap;*/
+  overflow: auto;
+  /* color: #FFF; */
+  background: #FFF8DC; /* 669966 99cc66 99ccff */
+  padding: .4em;
+  /* box-shadow: 2px 3px 2px #000; */
+  border: 1px solid #666666;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: 2px 3px 2px #888;
+  -webkit-box-shadow: 2px 3px 2px #888;
+  box-shadow: 2px 3px 2px #888;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
+/*width: 640px;*/
+position: relative;
+}
+/*
+pre:hover {
+	position: relative;
+	width: 960px;
+	z-index: 99;
+}*/
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~  663 CCC */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+	color: #FFF8DC;
+}
+ul.nav li {
+	border-bottom: 1px solid #000; /* this creates the button separation */
+	padding-left: 10px;
+	padding-right: 10px;
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 170px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #FFF8DC;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #000;
+	color: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.inner {
+	margin-left: 150px;	
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="sidebar1">
+    <ul class="nav">
+      <li>INFORMATION:</li>
+      <li><a href="#ss1">Description</a></li>
+      <li><a href="#ss2">Features</a></li>
+      <li>SCRIPTS:</li>
+      <li><a href="#ss3">ambientCombat</a></li>
+      <li><a href="#ss4">fillHouse</a></li>
+      <li><a href="#ss5">militarize</a></li>
+      <li><a href="#ss6">reinforcementChopper</a></li>
+      <li><a href="#ss11">heliParadrop</a></li>
+      <li>+</li>
+      <li><a href="#ss12">simpleCache (for fillHouse & militarize)</a></li>
+      <li>+</li>
+	  <li><a href="#ss10">Mission Templates</a></li>
+      <li>+</li>
+      <li><a href="#ss7">FAQ</a></li>
+      <li><a href="#ss8">Changelog</a></li>
+      <li><a href="#ss9">Credits</a></li>
+      
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+  <hr />
+  	<div align="right"><font style="font-variant: small-caps; font-size:11px;"> AI Spawn Script Pack 0.90 >> Documentation</font></div>
+    <hr />
+    <a name="ss1" id="ss1"></a>
+    <h2><u>Description</u></h2>
+    <p>I didn't find ACM from editor so I decided to do something "similar" and ended up building a pack of scripts I use in my own missions. These scripts can be called from init fields, Game Logics, triggers, almost from anywhere.</p>
+    <p>Package includes extremely simple example missions. Extract them to <i>C:\Users\YOUR_NAME\Documents\Arma 3\missions\</i> and open in Editor.</p>
+    
+    <p><b>NOTE:</b> If you dont care how these scripts function or dont want to explore/modify them, it's 600% easier for you if you just use <a href="AISSP.html">AISSP CALLING LINES App</a></li> to setup calling lines.</p>
+    
+    <p style="color:#F90;">I dont want to ask for anything, but if you find this project useful and desire to show any support, you can donate what ever you wish. Every buck if highly respected, and ensures me some extra time with Arma3 (mostly becouse my wife really hates me spending time with this stuff and keeps nagging "why do you keep doing that bullshit, are you like 13 years old, you can never earn anything with that crap") ;D</p> <div class="inner"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHPwYJKoZIhvcNAQcEoIIHMDCCBywCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBUTf6u9LYPh/uZAoB+HfIZfCOKeTa2y/rmwGW3P9mgJaWe+rsGeh5mbBnJ5CvHYfxBBSYxDeHGoni88GPbDXi3xLPa+wMGJXcboiX2YwxHkgR1KPAimkCelmSJp6mAIbQPe26IuY5coAk4erLeERkzXz/BMP2lAe+e7zkEHzFPjjELMAkGBSsOAwIaBQAwgbwGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIgVnQEeH/4kGAgZjlVP1/q64ItPyfe862juD9zhjbDTRBXyoU7u2zMUPT+dtp6XJWfq2nheTLJW4yHl6LiH2wS9dzOewc4/ooizz1qLFeQU8RqW3kDZ/aAjktPE6Pmnb+kBjiTEe905uRKiZXKxiIR7l1ifiESjo8Z78+FmXHHqtdtWrfJEHCJ4svjCLNKe9Q3E0n24T2G5t7umvLfM39jXjCFaCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTEzMDUyMDAzNTAzOVowIwYJKoZIhvcNAQkEMRYEFCZssBPcvJVy77ZKLKZSXxOuO52+MA0GCSqGSIb3DQEBAQUABIGAc//89b3zuVUYK2V1N88LuacMZEZ8ZQGwOlW0DRM1990btHdTZg2fxUDPDo9a/WddA5IHcY+pjntWE/EApdLYz2fu18hSm+OL1EoBUMr1yksKJz8RzxWoayXaRA2nGajOC7wAZ2s5Rbvnc6lqlnh8uMN9rnVK1rSSFCYr8VQ1wCE=-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></div>
+<p style="color:#F90;">Remember to include your nick to gain some credits! If you have any ideas or questions etc, my steam nick is: <i>fdsspun</i>
+</p>
+    
+    <p>These are the 5 main scripts of current version:</p>
+    <ol style="list-style:disc;">
+    <li><u>AmbientCombat:</u></li>
+    <p>Spawns random groups and vehicles around player/object and makes them patrol around it.<br />
+    <ol style="list-style:disc"> You can define following things:
+    <li>minimum range where units spawn</li>
+    <li>maximum range where units spawn</li>
+    <li>minimum spawning delay</li>
+    <li>maximum spawning delay</li>
+    <li>how many groups there is at the same time</li>
+    <li>spawning ratio for each side</li>
+    <li>center unit(s) or object, which the whole ambient is centralized to</li>
+    <li>skill levels of AI</li>
+    <li>does AI groups communicate to each others about enemy sightings</li>
+    <li>how far away (from center unit) AI units dissapear</li>
+    <li>customized init commands for AI</li>
+    <li>will units patrol as individual guerrilla forces, or via waypoints as military group</li>
+    <li>if script is used in MP mission, there's a feature which uses all players as 'center units'</li></ol>
+Every vehicle is counted as one group, so if 'groups' argument is set to 2, there might spawn only 2 vehicles, eventhough vehicles spawns with 30% probability.<br />
+Once group is dead or distance between group and center object is more than defined max distance, group will be deleted and new one is created. <br />
+You can also tweak settings in the script file itself, for example on which odds there spawns water or air units.<br />
+AmbientCombat can also be deleted with external script, which has it's own features to offer you different solutions.</p>
+	<li><u>FillHouse:</u></li>
+    <p>Fills nearest building, OR all buildings in defined range, with soldiers. <br />
+    <ol style="list-style:disc"> You can define following things:
+    <li>where the script is targeted to (object/unit)</li>
+    <li>side of units</li>
+    <li>will units patrol or idle</li>
+    <li>if they patrol, do they exit the building sometimes or stay only inside</li>
+    <li>spawn percentage or amount of units</li>
+    <li>if script is ment to fill more than one building, in how big range will it fill houses</li>
+    <li>skill levels of AI</li>
+    <li>will units be part of already existing group or is new group being created</li>
+    <li>customized init commands for AI</li>
+    <li>ID number which can be used later to delete all units created with it</li>
+    <li>Supports LV_fnc_simpleCache (with that you dont need triggers, script will automatically be executed when player(s) gets close to its location, and be terminated when there's no players near).</li>
+    </ol>
+	</p>
+    <li><u>Militarize:</u></li>
+    <p>Fills area with units. <br />
+    <ol style="list-style:disc"> You can define following things:
+    <li>where the script is targeted to (object/unit/marker/position array)</li>
+    <li>side of units</li>
+    <li>how large is the area where units are being spawned</li>
+    <li>will it spawn infantry</li>
+    <li>will it spawn vehicles (ground vehicles only atm)</li>
+    <li>will units patrol or idle</li>
+    <li>men spawning ratio or amount</li>
+    <li>vehicle spawning ratio or amount</li>
+    <li>skill levels of AI</li>
+    <li>will units be part of already existing group or is new group being created</li>
+    <li>customized init commands for AI</li>
+    <li>ID number which can be used later to delete all units created with it</li>
+    <li>Supports LV_fnc_simpleCache (with that you dont need triggers, script will automatically be executed when player(s) gets close to its location, and be terminated when there's no players near).</li>
+    <li>If units uses smokes when they get attacked, and chemlights at night time.</li>
+    <li>Does they close doors behind them.</li>
+    </ol>
+    </p>
+    <li><u>ReinforcementChopper:</u></li>
+    <p>Spawns chopper which transports infantry group where ever you like and leaves after that.<br />
+    <ol style="list-style:disc"> You can define following things:
+    <li>where chopper will land (object/unit/marker/position array)</li>
+    <li>is the landing spot accurate or will chopper find flat place somewhere near</li>
+    <li>side of units</li>
+    <li>which one of the selected sides chopper is it</li>
+    <li>will it be captive until it lands, or not</li>
+    <li>will infantry group patrol or not</li>
+    <li>infantry groups target (unit/marker/array of markers/group/array of groups/patrol-vD.sqf = patrols area & buildings)</li>
+    <li>in what direction chopper comes from</li>
+    <li>how far it comes from</li>
+    <li>is chopper going to land ASAP or will it defend itself f.ex. against other choppers</li>
+    <li>if inf. groups target is array of markers, will they cycle these markers</li>
+    <li>inf. groups size</li>
+    <li>if there's LZ smoke, cover smokes, flares or chemlights being used on landing spot</li>
+    <li>skill levels of AI</li>
+    <li>will units be part of already existing group or is new group being created</li>
+    <li>customized init commands for AI</li>
+    <li>ID number which can be used later to delete all units created with it</li>
+    <li>If 'landing spot' will automatically be one of alive non-captive players</li>
+    </ol>
+    </p>
+    <li><u>HeliParadrop:</u></li>
+    <p>Creates snazzy AI paradrop from chopper with various options.<br />
+    <ol style="list-style:disc"> You can define following things:
+    <li>Paradrop location</li>
+	<li>Side of units</li>
+	<li>Allow or disallow damage for chopper</li>
+	<li>Make chopper captive</li>
+	<li>Distance where the chopper comes from</li>
+	<li>Direction where the chopper comes from</li>
+	<li>Will it just flyby or stay still while paradrop</li>
+	<li>Fly height</li>
+	<li>How far from drop location the paradropping starts</li>
+	<li>How many units will be paradropping</li>
+	<li>Jump delay between paradroppers</li>
+	<li>Height where units opens their parachutes</li>
+	<li>If units uses smokes, flares or chems when they land</li>
+	<li>Will infantry group patrol or not</li>
+	<li>Infantry groups target (unit/marker/array of markers/group/array of groups/patrol-vD.sqf = patrols area & buildings)</li>										
+	<li>if inf. groups target is array of markers, will they cycle these markers</li>
+	<li>skill levels of AI</li> 
+	<li>will units be part of already existing group or is new group being created</li>
+	<li>customized init commands for AI</li>
+    <li>ID number which can be used later to delete all units created with it</li>
+    <li>If 'drop spot' will automatically be one of alive non-captive players</li>
+    </ol>
+    </p>
+    </ol>
+    <b>NOTE:</b> You can also do many things via <i>customized init commands</i>-parameter. It runs individually for every unit, but you can still for example give global name for a group:<br />
+    <pre>"MYgroupName = (group this);"</pre>
+    Or add event handler for every unit:
+    <pre>"this addEventHandler ['killed',{_this execVM 'SoldierDies.sqf'}];"</pre>
+    <hr /><hr />
+    
+    <a name="ss2" id="ss2"></a>
+    <h2><u>Features</u></h2>
+     <ol style="list-style:disc;">Main scripts:
+    <li><i>ambientCombat.sqf</i> - Creates Ambient Combat</li>
+    <li><i>militarize.sqf</i> - Fills building or buildings in radius with patrolling soldiers</li>
+    <li><i>fillHouse.sqf</i> - Fills area with patrolling units</li>
+    <li><i>reinforcementChopper.sqf</i> - Spawns chopper which brings infantry group to stage</li>
+    <li><i>heliParadrop.sqf</i> - Spawns chopper which brings paradrop group to stage</li>
+    </ol>
+
+	<ol style="list-style:disc;">4 extremely simple patrol scripts:
+    <li><i>patrol-vD.sqf</i> - makes infantry patrol around area, checking also buildings randomly</li>
+    <li><i>patrol-vE.sqf</i> - makes ground vehicles patrol around area</li>
+    <li><i>patrol-vF.sqf</i> - makes infantry unit patrol inside "his" building</li>
+    <li><i>patrol-vG.sqf</i> - same as above, but unit goes also outside sometimes</li>
+    </ol>
+
+	<ol style="list-style:disc;">22 simple functions:
+    <li><i>LV_fnc_ACcleanUp.sqf</i> - removes dead groups and groups which over max distance from center of ambient combat</li>
+    <li><i>LV_fnc_ACpatrol.sqf</i> - makes AI patrol around center of ambient combat</li>
+    <li><i>LV_fnc_ACskills.sqf</i> - sets AI skills</li>
+    <li><i>LV_fnc_AIcommunication.sqf</i> - makes AI groups communicate amongst and inform each others about enemies</li>
+    <li><i>LV_fnc_closeDoors.sqf</i> - makes AI close doors behind them (used by almost all scripts via patrol-vD)</li>
+    <li><i>LV_fnc_deleteOnDestination.sqf</i> - deletes unit after reaching its destination</li>
+    <li><i>LV_fnc_diveGroup.sq</i> - creates diver group</li>
+    <li><i>LV_fnc_findLandPosition.sqf</i> - finds position on land</li>
+    <li><i>LV_fnc_follow.sqf</i> - makes unit follow its target or cycle marker array</li>
+    <li><i>LV_fnc_fullAirVehicle.sqf</i> - creates air vehicle</li>
+    <li><i>LV_fnc_fullLandVehicle.sqf</i> - creates land vehicle</li>
+    <li><i>LV_fnc_fullWaterVehicle.sqf</i> - creates water vehicle</li>
+    <li><i>LV_fnc_getPlayers.sqf</i> - returns array of all alive non-captive playableUnits</li>
+    <li><i>LV_fnc_killAfterDelay.sqf</i> - kills unit after random delay</li>
+    <li><i>LV_fnc_menGroup.sqf</i> - creates random sized group of random soldiers</li>
+    <li><i>LV_fnc_nearestBuilding.sqf</i> - finds near buildings (real ones with buildingPos')</li>
+    <li><i>LV_fnc_randomSpot.sqf</i> - picks random spot in defined range</li>
+    <li><i>LV_fnc_removeAC.sqf</i> - removes ambienCombat units in various ways</li>
+    <li><i>LV_fnc_removeDead.sqf</i> - removes dead units (will be implemented)</li>
+    <li><i>LV_fnc_removeGroup.sqf</i> - removes units which are created by fillHouse or militarize</li>
+    <li><i>LV_fnc_simpleCache.sqf</i> - caches militarize & fillhouse</li>
+    <li><i>LV_fnc_vehicleInit.sqf</i> - this replaces setVehicleInit command</li>
+    </ol>
+    
+    <ol style="list-style:disc;">1 mission template: <font color="#990000">NOT INCLUDED IN THIS VERSION</font>
+    <li><i>randomSectors1.sqf</i> - creates "clear area" type of missions randomly in pre-placed GameLogics/Objects, and has also functionality to create random "defend area" type of mission after area is cleared first (Enemies gets air- and inf-reinforcements). Clear area -tasks uses militarize and fillhouse scripts, and additional Defend area -tasks uses reinforcementChopper and menGroup scripts.</li>
+    </ol>
+    
+    <hr /><hr />
+    
+    <a name="ss3" id="ss3"></a>
+    <h2><u>AmbientCombat</u></h2>
+    <p>Creates ambient combat around defined object/unit.</p>
+    
+    <h5>Calling AmbientCombat</h5>
+	<p>Syntax:</p> 
+    <pre>nul = [] execVM "LV\ambientCombat.sqf";</pre>
+    <p>Customized:</p>
+    <pre>nul = [minRange,maxRange,minDelay,maxDelay,groups,side ratios,centerUnit,AIskills,communication,dissapearDistance,custom init,patrol type,MP] 
+    execVM "LV\ambientCombat.sqf";</pre>
+	<ol style="list-style:disc;">Parameters:
+<li><i>minRange</i> = 1-2000 (meters, minimum range from player/centerUnit for AI to spawn) DEFAULT: 450</li>
+<li><i>maxRange</i> = 1-2400 (meters, maximum range from player/centerUnit for AI to spawn) DEFAULT: 900</li>
+<li><i>minDelay</i> = 0-3600 (seconds, minimum spawning delay for AI) DEFAULT: 30</li>
+<li><i>maxDelay</i> = 1-3600 (seconds, maximum spawning delay for AI) DEFAULT: 300</li>
+<li><i>groups</i> = 1-20 (how many AI groups can be alive at the same time) DEFAULT: 6</li>
+<li><i>side ratios</i> = array ([west ratio, east ratio, ind ratio], each ratio value is number between 0.0 - 1.0) DEFAULT: [1,1,1]</li>
+<li><i>centerUnit</i> = unit/array of units (unit or units which are the center of all action) DEFAULT: player</li>
+<div class="inner">
+<pre>Examples:
+player
+[pl1,pl2,pl3,pl4,pl5]
+</pre>
+</div>
+<li><i>AIskills</i> = 0-1.0 or "default" (AIs skills) DEFAULT: "default"<br />
++NOTE: AIskills can also be defined individually with syntax:<br />
+<pre>[aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed]</pre></li>
+<div class="inner">
+<pre>Examples:
+0.75					 makes all AI skill levels to 0.75 (75%)
+[0.75,0.8,0.9,1,1,1,1,1,0.9,1] 		 adjusts skill levels separately
+"default"				 leaves AI skills to default
+</pre>
+</div>
+<li><i>communication</i> = 0 or 1 (if 1, then AI groups will communicate and informs each others about enemies, atm only BLU & OPF) DEFAULT: 0</li>
+<li><i>dissapearDistance</i> = meters (distance from centerUnit where AI units/groups will dissapear) DEFAULT: 2500<br />
++NOTE: Make sure this is bigger than maxRange!</li>
+<li><i>custom init</i> = "custom init lines" (if you want to add something in units init lines, add it here in "quotes". if you need to use quotes with some commands, use ' or "" instead of ") DEFAULT: nil<br />
+<div class="inner">
+<pre>
+Examples: 
+"hint format['this is custom init from unit %1',this];"
+"hint 'Spawning!'; this setCaptive true;"
+</pre></div>
+</li>
+<li><i>patrol type</i> = 1 or array	(1 = doMove for each unit individually, array = waypoint for group)	DEFAULT: 1<br />
+Array syntax: ["waypointBehaviour","waypointType"]<br />
+<div class="inner">
+<pre>Examples: 
+1				old way, units moves to target location kinda like guerrilla forces
+["AWARE","SAD"]			units moves as military group to target location, behaviour is AWARE and WP type Search&Destroy
+</pre></div>
+WaypointBehaviour options: "CARELESS","SAFE","AWARE","COMBAT","STEALTH" <br />
+WaypointType options: "MOVE","DESTROY","SAD"</li>
+<li><i>MP</i> =	true/false (true = 'center unit' will automatically be an array of alive non-captive playableUnits) DEFAULT: false</li>
+</ol>
+<p>Fully customized example:</p>
+<pre>nul = [150,600,10,30,8,[0,1,.5],player,[0.2,0.3,0.1,0.55,0.25,1,1,0.25,1,1],1,800,nil,["AWARE","SAD"],false] execVM "LV\ambientCombat.sqf";</pre>
+
+<h5><u>Avoid areas</u></h5>
+<p>You can also make markers where Ambient Combat should not spawn units and which they will try to avoid during their patrolling. This can be done by making markers (RECTANGLE & ELLIPSE). Name the first one as <i>ACavoid</i> and just copy it so that next ones will have name like <i>ACavoid_1</i> etc, up to <i>ACavoid_30</i>. These can be created on the fly, and AC will notice them.</p>
+
+
+	<h5><u>Removing AmbientCombat</u></h5>
+    <p>To remove AmbientCombat properly, you must use custom handle when calling it, not <i>nul</i>, f.ex:</p>
+    <pre>war = [this,150,600,10,30,8,player,"default",1,800,nil["AWARE","SAD"]] execVM "LV\ambientCombat.sqf";</pre>
+    <p>After that you can remove AmbientCombat by using <i>LV_fnc_removeAC.sqf</i> easily for example from trigger.</p>
+    <p>Syntax:</p>
+    <pre>nul = [handle,style,syncedUnit,range/delay,flee direction] execVM "LV\LV_functions\LV_fnc_removeAC.sqf";</pre>
+	<ol style="list-style:disc;">Parameters:
+    <li><i>handle</i> = handle of ambientCombat, in this example: <i>war</i></li>
+	<li><i>style</i> = 0 or 1 or 2 (0 = units dissapear straight away, 1 = units forfeit and dissapear after *range, 2 = units die after random *delay)</li>
+	<li><i>syncedUnit</i> = <i>centerUnit</i> of ambientCombat (in this example: <i>player</i>)</li>
+	<li><i>range/delay</i> = range in meters / max delay in secs (if used style 1, units will dissapear after moving *range from *syncedUnit) OR<br />
+	(if used style 2, units will die after random *delay)</li>
+    <li><i>flee direction</i> = 0-360 (direction where ai will forfeit if style 1 is used) DEFAULT: nil (=away from syncedUnit)</li>
+    </ol>
+    <p>Example:</p>
+    <pre>nul = [war,1,player,600,180] execVM "LV\LV_functions\LV_fnc_removeAC.sqf";</pre>
+    
+
+    
+    
+    <hr /><hr />
+    
+    <a name="ss4" id="ss4"></a>
+    <h2><u>FillHouse</u></h2>
+    <p>Fills single house or multiple buildings in defined range with soldiers.</p>
+    <p>Syntax:</p>
+    <pre>nul = [this] execVM "LV\fillHouse.sqf";</pre>
+	<p>Customized:</p>
+    <pre>nul = [target, side, patrol, patrol type, spawn %, radius, skills, group, custom init, ID] execVM "LV\fillHouse.sqf";</pre>
+    <ol style="list-style:disc;">Parameters:
+    <li><i>target</i> = center point (if called from game logic, then <i>this</i>, or if called from trigger and targeted to game logic, then game logics' name)</li>
+	<li><i>side</i> = 1 or 2 or 3 (1 = blue team, 2 = red team, 3 = green team) DEFAULT: 2</li>
+	<li><i>patrol</i> = true or false (if true, units will patrol) DEFAULT: true</li>
+	<li><i>patrol type</i> = 1 or 2 (1=only inside building, 2=also outside of building) DEFAULT: 2</li>
+	<li><i>spawn %</i> = 1-100 OR Array (on how many percentage of possible positions are soldiers spawned) DEFAULT: 50<br />
+    +NOTE: Array - you can also use following syntax: [amount,random amount]<br />
+    <div class="inner"><pre>Examples:
+    50			 will spawn unit into 50% of available building positions in building/area 
+    [10,12]		 will spawn at least 10 units + random 1-12 units </pre></div></li>
+	<li><i>radius</i> = 1 or larger number (1=nearest building. if larger number, then all buildings in radius) DEFAULT: 1</li>
+	<li><i>skills</i> = 0-1.0 or "default" (AIs skills) DEFAULT: "default"<br />
+	+NOTE: AIskills can also be defined individually with syntax:
+	<pre>[aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed]</pre></li>
+    <div class="inner">
+<pre>Examples:
+0.75					 makes all AI skill levels to 0.75 (75%)
+[0.75,0.8,0.9,1,1,1,1,1,0.9,1] 		 adjusts skill levels separately
+"default"				 leaves AI skills to default
+</pre>
+</div>
+    <li><i>group</i> = group name OR nil (if you want units in existing group, set it here. if nil, new group is made) DEFAULT: nil<br />
+    EXAMPLE: (group player)</li>
+    <li><i>custom init</i> = "custom init lines" (if you want to add something in units init lines, add it here in "quotes". if you need to use quotes with some commands, use ' or "" instead of ") DEFAULT: nil<br />
+    <div class="inner">
+<pre>
+Examples: 
+"hint format['this is custom init from unit %1',this];"
+"hint 'Spawning!'; this setCaptive true;"
+</pre></div>
+    </li>
+    <li><i>ID</i> = number (if you want to delete units this script creates, you'll need to set ID number) DEFAULT: nil</li>
+    </ol>
+    
+    <p>Fully customized example:</p>
+<pre>nul = [this, 1, true, 2, 15, 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,nil,6] execVM "LV\fillHouse.sqf";</pre>
+    
+    <h5><u>Removing fillHouse units</u></h5>
+    <p>To remove fillHouse units, you must make sure you have set ID number when calling fillHouse.sqf. At this point it will just simply remove all units, I'll add some other options later on.</p>
+    <p>After that you can use <i>LV_fnc_removeGroup.sqf</i>.</p>
+    <p>Syntax:</p>
+    <pre>nul = [LVgroup+ID] execVM "LV\LV_functions\LV_fnc_removeGroup.sqf";</pre>
+	<ol style="list-style:disc;">Parameters:
+    <li><i>LVgroup+ID</i> = LVgroup + ID number (For example: <i>LVgroup6</i>) DEFAULT: nil</li></ol>
+    <p>Example:</p>
+    <pre>nul = [LVgroup6] execVM "LV\LV_functions\LV_fnc_removeGroup.sqf";</pre>
+    
+    
+   
+    <b>NOTE: You might want to use <a href="#ss12">simpleCache</a> with this!</b>
+    
+    <hr /><hr />
+    
+    <a name="ss5" id="ss5"></a>
+    <h2><u>Militarize</u></h2>
+    <p>Militarizes area with infantry units and/or ground vehicles.</p>
+    <p>Syntax:</p>
+    <pre>nul = [this] execVM "LV\militarize.sqf";</pre>
+	<p>Customized:</p>
+    <pre>nul = [target, side, radius, spawn men, spawn vehicles, still, men ratio, vehicle ratio, skills, group, custom init, ID] execVM "LV\militarize.sqf";</pre>
+    <ol style="list-style:disc;">Parameters:
+    <li><i>target</i> = center point (object/unit/marker/position array, remember to use "quotes" with marker)</li>
+	<li><i>side</i> = 0 or 1 or 2 or 3 (0 = civilian, 1 = blue, 2 = red, 3 = green) DEFAULT: 2</li>
+	<li><i>radius</i> = meters (from center point) DEFAULT: 150</li>
+	<li><i>spawn men</i> = [boolean, boolean] - spawn land units, spawn water units - DEFAULT: [true,false]</li>
+	<li><i>spawn vehicles</i> = [boolean, boolean, boolean] - spawn land vehicles, spawn water vehicles, spawn air vehicles - DEFAULT: [true,false,false]</li>
+	<li><i>still</i> = true or false ( if false, then units will patrol in radius, checkin also buildings) DEFAULT: false</li>
+	<li><i>men ratio</i> = decimal OR Array (amount of spawning men = radius * men ratio) DEFAULT: 0.3<br />
+    +NOTE: Array - you can also use following syntax: [amount,random amount] for example:<br />
+    <div class="inner"><pre>Examples:
+    0.2			 will spawn 50 units if radius is 250 (250 * 0.2 = 50)
+    [10,12]		 will spawn at least 10 units + random 1-12 units </pre></div></li>
+	<li><i>vehicle ratio</i> = decimal OR Array (amount of spawning vehicles = radius * vehicle ratio, ie: 250 * 0.1 = 25 vehicles) DEFAULT: 0.1<br />
+    +NOTE: Array - you can also use following syntax: [amount,random amount] just like in <i>men ratio</i></li>
+	<li><i>skills</i> = 0-1.0 or "default" (AIs skills) DEFAULT: "default"<br />
+	NOTE: AIskills can also be defined individually with syntax:
+	<pre>[aimingAccuracy,aimingShake,aimingSpeed,spotDistance,spotTime,courage,commanding,general,endurance,reloadSpeed]</pre></li>
+    <div class="inner">
+<pre>Examples:
+0.75					 makes all AI skill levels to 0.75 (75%)
+[0.75,0.8,0.9,1,1,1,1,1,0.9,1] 		 adjusts skill levels separately
+"default"				 leaves AI skills to default
+</pre>
+</div>
+    <li><i>group</i> = group name OR nil (if you want units in existing group, set it here. if nil, new group is made) DEFAULT: nil<br />
+    EXAMPLE: (group player)</li>
+    <li><i>custom init</i> = "custom init lines" (if you want to add something in units init lines, add it here in "quotes". if you need to use quotes with some commands, use ' or "" instead of ") DEFAULT: nil<br />
+    <div class="inner">
+<pre>
+Examples: 
+"hint format['this is custom init from unit %1',this];"
+"hint 'Spawning!'; this setCaptive true;"
+</pre></div></li>
+    <li><i>ID</i> = number (if you want to delete units this script creates, you'll need to set ID number) DEFAULT: nil</li>
+	</ol>
+    
+    <p>Fully customized example:</p>
+	<pre>nul = [this,2,350,[true,true],[true,true,false],false,[25,25],0.1,[0.2,0.2,0.2,0.85,0.9,0.75,0.1,0.6,1,1],nil,nil,61] execVM "LV\militarize.sqf";</pre>
+    
+    <h5><u>Removing militarize units</u></h5>
+    <p>To remove militarize units, you must make sure you have set ID number when calling militarize.sqf. At this point it will just simply remove all units, I'll add some other options later on.</p>
+    <p>After that you can use <i>LV_fnc_removeGroup.sqf</i>.</p>
+    <p>Syntax:</p>
+    <pre>nul = [LVgroup+ID] execVM "LV\LV_functions\LV_fnc_removeGroup.sqf";</pre>
+	<ol style="list-style:disc;">Parameters:
+    <li><i>LVgroup+ID</i> = LVgroup + ID number (For example: <i>LVgroup6</i>) DEFAULT: nil</li></ol>
+    <p>Example:</p>
+    <pre>nul = [LVgroup61] execVM "LV\LV_functions\LV_fnc_removeGroup.sqf";</pre>
+    
+
+    
+    <h5><u>Extra options:</u></h5>
+    <p>In script file itself you can find _smokesAndChems (units uses smokes and chemlights), and _doorHandling (units closes doors behind them).</p>
+    
+    <b>NOTE: You might want to use <a href="#ss12">simpleCache</a> with this!</b>
+    
+    <hr /><hr />
+    
+    <a name="ss6" id="ss6"></a>
+    <h2><u>ReinforcementChopper</u></h2>
+    <p>Spawns chopper which transports infantry group to stage.</p>
+    <p>Syntax:</p>
+    <pre>nul = [this] execVM "LV\reinforcementChopper.sqf";</pre>
+    <p>Customized:</p>
+    <pre>nul = [spot,exact,side,type,captive,patrol,target,direction,distance,precise,cycle,groupSize,skills,smoke,group,custom init,ID,MP] 
+    execVM "LV\reinforcementChopper.sqf";</pre>
+    <ol style="list-style:disc;">Parameters:
+    <li><i>spot</i> = landing spot (object/unit/marker/position array, remember to use "quotes" with marker)</li>
+    <li><i>exact</i> = true or false (true = tries landing exactly on *spot, false = finds place where chopper fits) DEFAULT: true</li>
+    <li><i>side</i> = 1 or 2 or 3 (1 = west, 2 = east, 3 = independent) DEFAULT: 1</li>
+    <li><i>type</i>	= number (Depends on side) DEFAULT: 1<br />
+    <div class="inner"><pre>WEST: 1 = B_Heli_Light_01_armed_F, 2 = B_Heli_Light_01_F, 3 = B_Heli_Transport_01_F
+EAST: 1 = O_Heli_Attack_02_F, 2 = O_Heli_Attack_02_black_F, 3 = O_Heli_Light_02_F, 4 = O_Heli_Light_02_unarmed_F
+INDEPENDENT: 1 = I_Heli_Transport_02_F</pre></div></li>
+    <li><i>captive</i> = true or false (if true, enemies wont notice chopper before it has landed) DEFAULT: false</li>
+    <li><i>patrol</i> = true or false (if false, units wont patrol in any way = handy if you set (group player) as *group) DEFAULT: true</li>
+    <li><i>target</i> = (patrol target which infantry goes after) DEFAULT: player<br />
+    <div class="inner"><pre>Choises:
+unit					= 	units name, ex: enemyunit1
+marker 					= 	markers' name, ex: "marker01" (remember quotes with markers!)
+marker array 				= 	array of markers in desired order, ex: ["marker01","marker02","marker03"]
+group					= 	groups name, ex: (group enemy1)	OR BlueGroup17
+group array				=	ex: [(group player), (group blue2)]
+["PATROL",center position,radius] 	= 	uses patrol-vD.sqf, ex: ["PATROL",(getPos player),150]
+    						(units patrols in radius, also checking buildings)</pre></div></li>
+	<li><i>direction</i> = "random" or 0-360 (direction where chopper comes from, use quotes with random!) DEFAULT: "random"</li>
+	<li><i>distance</i> = number (from how far chopper comes from) DEFAULT: <i>1500</i></li>
+    <li><i>precise</i> = true or false (true = heli will land even in middle of war, false = heli might have air fights etc before landing) DEFAULT: true</li>
+	<li><i>cycle</i> = true or false (if true and target is array of markers, unit will cycle these markers) DEFAULT: false</li>
+	<li><i>groupSize</i> = 1-8 (infantry groups' size) DEFAULT: 8</li>
+	<li><i>skills</i> = 0-1.0 or "default" (AIs skills) DEFAULT: "default"<br />
+	NOTE: AIskills can also be defined individually with syntax:
+	<pre>[aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed]</pre></li>
+    <div class="inner">
+<pre>Examples:
+0.75					 makes all AI skill levels to 0.75 (75%)
+[0.75,0.8,0.9,1,1,1,1,1,0.9,1] 		 adjusts skill levels separately
+"default"				 leaves AI skills to default
+</pre>
+</div>
+	<li><i>smoke</i> = [LZ smoke, cover smokes, flare, chemlights] (if chopper uses these on landing spot) DEFAULT: [false,false,false,false]</li>
+    <li><i>group</i> = group name OR nil (if you want units in existing group, set it here. if nil, new group is made) DEFAULT: nil<br />
+    EXAMPLE: (group player)</li>
+    <li><i>custom init</i> = "custom init lines" (if you want to add something in units init lines, add it here in "quotes". if you need to use quotes with some commands, use ' or "" instead of ") DEFAULT: nil<br />
+    <div class="inner">
+<pre>
+Examples: 
+"hint format['this is custom init from unit %1',this];"
+"hint 'Spawning!'; this setCaptive true;"
+</pre></div></li>
+	<li><i>ID</i> = number (if you want to delete units this script creates, you'll need to set ID number) DEFAULT: nil</li>
+    <li><i>MP</i> =	true/false (true = 'landing spot' will automatically be an array of alive non-captive playableUnits) DEFAULT: false</li>
+    </ol>
+    <p>Fully customized example:<br />
+    <pre>nul = [this,false,1,3,false,true,["marker01","marker02","marker03"],"random",1000,true,true,5,[false,true,false,true],0.85,(group player),nil,33,false] 
+    execVM "LV\reinforcementChopper.sqf";</pre>
+    Spawns chopper in random direction, 1000m away from game logic. It lands somewhere near game logic, uses cover smokes & chemlights, 5 infantry units joins players group, gets out and moves first to marker01, then marker02 and finally to marker03 and continues cycling them.</p>
+    
+
+    
+    <h5>Additional stuff:</h5>
+    <p>If you set patrol to false, units will idle (if not joined to another group), and you can extend the script and make them do some custom stuff. (I commented the location in script, line 347)</p>
+    <p>LV_fnc_follow.sqf has been changed a lot, and there's also things you can customize pretty easily. If you target inf group to go after another group or array of groups, there's maximum distance for them to action. (Gives more mission options for MP)<br />
+    Max distance is defined in reinforcementChopper.sqf on lines 326 and 341 (mDis = 1000m as default), and if inf group is that far away from its target group (or target group -array), it will stay idling, and those idling positions are commented in LV_fnc_follow.sqf on lines 73 and 103. There you can add custom stuff.</p>
+    
+    <h5><u>Extra options:</u></h5>
+    <p>In script file itself you can find _doorHandling (units closes doors behind them).</p>
+    
+    <hr /><hr />
+    
+    
+    <a name="ss6" id="ss11"></a>
+    <h2><u>HeliParadrop</u></h2>
+    <p>Spawns chopper which delivers paradrop group on stage.</p>
+    <p>Syntax:</p>
+    <pre>nul = [this] execVM "LV\heliParadrop.sqf";</pre>
+    <p>Customized:</p>
+    <pre>nul = [spot, side, allowDamage, captive, distance, direction, flyby, fly height, jump distance, group size, jump delay, open height, smokes, flares, 
+    chems, patrol, target, cycle, skills, group, custom init, ID, MP] execVM "LV\heliParadrop.sqf";</pre>
+    <ol style="list-style:disc;">Parameters:
+    <li><i>spot</i> = drop spot (object/unit/marker/position array, remember to use "quotes" with marker)</li>
+<li><i>side</i> = 1 or 2 or 3 (1 = west, 2 = east, 3 = independent)	DEFAULT: 2</li>
+<li><i>allowDamage</i> = true/false	(allow or disallow damage for chopper) DEFAULT: true</li>
+<li><i>captive</i> = true/false (if true, enemies wont notice chopper) DEFAULT: false</li>
+<li><i>distance</i>	= number (from how far chopper comes from) DEFAULT: 1500</li>
+<li><i>direction</i> = "random" or 0-360 (direction where chopper comes from, use quotes with random!) DEFAULT: "random"</li>
+<li><i>flyby</i> = true/false (true = chopper just flies thru target, false = stays still while dropping units) DEFAULT: true</li>
+<li><i>fly height</i> = number (how high chopper flies) DEFAULT: 200</li>
+<li><i>jump distance</i> = number (how many meters before target location units starts jumping out of heli) DEFAULT: 150</li>
+<li><i>group size</i> = number (how many units is in para drop group) DEFAULT: 8</li>
+<li><i>jump delay</i> = number (how many seconds is the delay between jumps) DEFAULT: 0.5</li>
+<li><i>open height</i> = number (in which height units opens their parachutes) DEFAULT: 50</li>
+<li><i>smokes</i> =	true/false (will units throw cover smokes (on 10m height)) DEFAULT: false</li>
+<li><i>flares</i> =	true/false (will units throw flares (on 30m height)) DEFAULT: false</li>	
+<li><i>chems</i> = true/false (will units throw chemlights (on 30m height)) DEFAULT: false</li>
+<li><i>patrol</i> = true or false (if false, units wont patrol in any way = handy if you set (group player) as *group) DEFAULT: true</li>
+<li><i>target</i> = (patrol target which infantry goes after) DEFAULT: player<br />
+    <div class="inner"><pre>Choises:
+unit					= 	units name, ex: enemyunit1
+marker 					= 	markers' name, ex: "marker01" (remember quotes with markers!)
+marker array 				= 	array of markers in desired order, ex: ["marker01","marker02","marker03"]
+group					= 	groups name, ex: (group enemy1)	OR BlueGroup17
+group array				=	ex: [(group player), (group blue2)]
+["PATROL",center position,radius] 	= 	uses patrol-vD.sqf, ex: ["PATROL",(getPos player),150]
+    						(units patrols in radius, also checking buildings)</pre></div></li>									
+<li><i>cycle</i> = true or false (if true and target is array of markers, unit will cycle these markers) DEFAULT: false</li>
+<li><i>skills</i> = 0-1.0 or "default" (AIs skills) DEFAULT: "default"<br />
+	NOTE: AIskills can also be defined individually with syntax:
+	<pre>[aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed]</pre></li>
+    <div class="inner">
+<pre>Examples:
+0.75					 makes all AI skill levels to 0.75 (75%)
+[0.75,0.8,0.9,1,1,1,1,1,0.9,1] 		 adjusts skill levels separately
+"default"				 leaves AI skills to default
+</pre>
+</div>
+<li><i>group</i> = group name OR nil (if you want units in existing group, set it here. if nil, new group is made) DEFAULT: nil<br />
+    EXAMPLE: (group player)</li>
+    <li><i>custom init</i> = "custom init lines" (if you want to add something in units init lines, add it here in "quotes". if you need to use quotes with some commands, use ' or "" instead of ") DEFAULT: nil<br />
+    <div class="inner">
+<pre>
+Examples: 
+"hint format['this is custom init from unit %1',this];"
+"hint 'Spawning!'; this setCaptive true;"
+</pre></div></li>
+	<li><i>ID</i> = number (if you want to delete units this script creates, you'll need to set ID number) DEFAULT: nil</li>
+    <li><i>MP</i> =	true/false (true = 'landing spot' will automatically be an array of alive non-captive playableUnits) DEFAULT: false</li>
+    </ol>
+    <p>Fully customized example:<br />
+    <pre>nul = [player, 2, false, true, 1000, "random", true, 500, 200, 6, 1, 50, true, false, true, true, player, false, 0.75, nil, nil, 1,false] 
+    execVM "LV\heliParadrop.sqf";</pre></p>
+    
+
+    
+     <h5><u>Extra options:</u></h5>
+    <p>In script file itself you can find _doorHandling (units closes doors behind them).</p>   
+    
+    <hr /><hr />
+    
+    <a name="ss6" id="ss12"></a>
+    <h2><u>simpleCache (for fillHouse & militarize)</u></h2>
+    <p>Makes fillHouse and militarize -units spawn when player is near, and despawn when player is further.</p>
+    <p>Syntax:</p>
+	<pre>nul = [[ID's],[players],distance,keep count,MP] execVM "LV\LV_functions\LV_fnc_simpleCache.sqf";</pre>
+	<ol style="list-style:disc;">Parameters:
+	<li><i>ID's</i> = array of script ID's</li>
+	<li><i>players</i> = array of players (doesnt matter what you set here if you use MP mode)</li>
+	<li><i>distance</i>	= distance between player(s) and militarize/fillHouse on where scripts will be activated</li>
+	<li><i>keep count</i> =	true/false (true = script will count & save AI amounts, false = AI amount will be reseted on each time it activates again)</li>
+	<li><i>MP</i> =	true/false (true = all alive non-captive playableUnits will activate scripts, false = only units in players-array)</li>
+	</ol>
+	<p>Fully customized example:<br />	
+	<pre>nul = [[13,14],[playerUnit1],500,true,false] execVM "LV\LV_functions\LV_fnc_simpleCache.sqf";</pre></p>
+    
+
+    
+    <h5><u>Extra options:</u></h5>
+    <p>You can find _excludeSingleHeliPilot in the script file. (true = if single player flies over area as pilot, area wont trigger (reduces lag))</p>
+    
+    <hr /><hr />
+    
+    
+    <a name="ss10" id="ss10"></a>
+    <h2><u>Mission Templates</u></h2>
+    <p>Misc scripts & mission templates which uses my other scripts.</p>
+    <h3><b>randomSectors1.sqf</b></h3>
+    <p>This is mission script which uses many of my other script files. It creates "clear area" type of missions randomly in pre-placed GameLogics/Objects, and has also functionality to create random "defend area" type of mission after area is cleared first (Enemies gets air- and inf-reinforcements). Clear area -tasks uses militarize and fillhouse scripts, and additional Defend area -tasks uses reinforcementChopper and menGroup scripts.</p>
+    <p>Example mission is very simple, this script is called from players init. I commented script file pretty accurately to make it easy to use and modify, but here's also some most important stuff to notice:</p>
+    <p><b># Syntax:</b></p>
+    <pre>nul = [radius, [game logics]] execVM "randomSectors1.sqf";</pre>
+    <ol style="list-style:disc;">
+    <li>radius = radius from GameLogics/Objects inside where enemies patrols</li>
+    <li>[game logics] = put all GameLogics/Objects you want to use as hostile areas in this array</li></ol>
+    <p>Example:</p>
+    <pre>nul = [100, [gameLogic01,gameLogic02,gameLogic03]] execVM "randomSectors1.sqf";</pre><br />
+    <p><b># Other information:</b></p>
+    <p>This mission runs as loop forever, but you can stop it with (from script or trigger or anywhere):</p>
+    <pre>LVSspots = nil;</pre>
+    <p>After this the script ends when currently activated task has been completed.</p><br />
+    <p><b>#</b> LINES 94-95: in SP use line 95, in MP line 94</p>
+    <pre>//_players = playableUnits; //MP (takes automatically all playable units)
+_players = [player]; //SP (fill this manually in SP)</pre><br />
+	<p><b>#</b>LINE 91: this defines the delay between tasks</p>
+    <pre>_sleepDelay = 5+(random 2); //random sleep time before new task</pre><br />
+    <p><b>#</b>There's two radio triggers in mission. With first one (Alpha, press 0 0 1) you can toggle statistics for this script. It shows amount of units from different scripts and average fps. Second one (Bravo, press 0 0 2) just executes "LVSspots = nil;" and makes the script end after current task.</p><br />
+    <p><b>#</b>You can also tweak a lot of settings in the actual script file, for example:</p>
+    <ol style="list-style:disc;">
+    <li><i>"_backupPercentage"</i> - when hostile units is only this % alive, possible reinforcements will engage area</li>
+    <li><i>"_engagePercentage"</i> - when hostile units is only this % alive, they will attack player group</li>
+    <li><i>"_updateTask"</i> - show or do not show update task -notification when reinforcements engages area</li>
+    <li>allmost all parameters for other scripts!</li>
+    </ol>
+    <b>Issues:</b>
+    <p>At the moment if there's only one unit in player group, all hostiles wont necesserely engage on "_engagePercentage" -case. (In MP this shouldnt be a problem if respawn is being used?)</p><br />
+    
+    <hr /><hr />
+    
+    <a name="ss7" id="ss7"></a>
+    <h2><u>FAQ</u></h2>
+    <h4>Q: Where to put script files?</h4>
+    <p>When you save your mission in editor, it will be saved to <i>C:\Users\YOUR_NAME\Documents\Arma 3\missions\MISSION_NAME\</i> and into that folder you should put <i>LV</i> folder.</p>
+    <h4>Q: How to add script in Trigger?</h4>
+    <p>If script's calling line goes like: <i>nul = [this,1,50..] execVM...</i> then usually you can just put the same line into Triggers' ON ACT -field and replace <i>this</i> with target objects name. <br />Add for example Game Logic there where you want this script to be located and name it <i>gamelog01</i>, and then call the script from trigger: <i>nul = [gamelog01,1,50..] execVM...</i>. In militarize, fillHouse and reinforcementChopper the first argument is target location/object/marker.</p>
+    <h4>Q: How to execute a script only for group leader?</h4>
+    <p>Custom init executes on every unit, but you can also use it to execute something only for leader, like this:
+    <div class="inner"><pre>"if(this==(leader(group this)))then{nul = [this] execVM 'leaderScript.sqf'};"</pre></div></p>
+    <h4>Q: I'm getting error when I use markers, what to do?</h4>
+    <p>Most likely you have forgotten to use quotes with marker name when you refer to it. If you name your marker as marker1, in scripts and calling lines you must use quotes: "marker1".</p>
+    <h4>Q: Getting errors when using simpleCache?</h4>
+    <p>Use fillHouse & militarize in gamelogics, and name the gamelogics.</p>
+    <h4>Q: Getting error when targeting inf group to hunt player group?</h4>
+    <p>If this happens, check if you have set the target like: (group player). If so, name the group and replace (group player) with that name.<br />
+    How to name it? Set in unit's init: groupName = group this;</p>
+    <h4>Q: CustomInit wont work! What to do?</h4>
+    <p>Make sure you have ended every sentence to semicolon, and you have NOT used normal quotes (") inside "custom init line". Instead of " use ' or "".<br />
+	For example: "hint 'this is custom init';"<br />
+    If problem occurs when you try to use EventHandler -> do NOT include any conditions inside EventHandler. Use it to execVM your own script file which has the conditions inside it.</p>
+    <br />
+    <hr /><hr />
+    
+    <a name="ss8" id="ss8"></a>
+    <h2><u>Changelog</u></h2>
+    <ol style="list-style:disc;"><b>0.90 (22.9.13):</b>
+    <li>File structure changed! Same as before, but EVERYTHING is finally inside LV-folder.</li>
+    <li>Included <a href="AISSP.html">AISSP CALLING LINES App</a></li>
+    <li>Updated all classnames</li>
+    <li>LV_fnc_nearestBuilding - building reference changed from "house" to "building" - should find more buildings now</li>
+    <li>Militarize: spawn men -parameter is now [boolean, boolean] - spawn land units, spawn water units - default: [true,false] </li>
+    <li>Militarize: spawn vehicles -parameter is now [boolean, boolean, boolean] - spawn land vehicles, spawn water vehicles, spawn air vehicles - default: [true,false,false]</li>
+    <li>FillHouse is fixed and works at Altis (removed nearestBuilding from its patrols)</li>
+    <li>AmbientCombat: You can now define areas where AC groups wont spawn and which they try to avoid during patrolling.<br />
+This can be done by making markers (RECTANGLE & ELLIPSE). Name the first one as ACavoid and just copy it so that next ones will have name like ACavoid_1 etc, up to ACavoid_30.
+These can be created on the fly, and AC will notice them.</li>
+	<li>Fixed vehicle positioning bug in LV_fnc_fullLandVehicle.sqf</li>
+    <li>Many minor fixes like isServer -check in removeAC, expanded nearestBuilding to work better, removeDead removes empty groups, etc..</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.80 (4.8.13):</b>
+    <li>Added new main script: heliParadrop.sqf which creates AI paradrops with many features</li>
+    <li>Added caching script for fillHouse and militarize</li>
+    <li>New parameters in AmbientCombat: side ratio, mp</li>
+    <li>Changed main functionality in AmbientCombat, includes now water units and is really MP compatible</li>
+    <li>Militarize units can now close doors and use smokes & chemlights (can be disabled in militarize.sqf)</li>
+    <li>CloseDoors script is binded to patrol-vD, so it can be used also within chopper scripts</li>
+    <li>Militarize "center" is movable</li>
+    <li>ReinforcementChopper can now use LZ smoke, cover smokes, flare and chemlights</li>
+    <li>HeliParadrop & ReinforcementChopper has also MP parameter</li>
+    <li>Replaced all nearestBuilding commands with custom function</li>
+    <li>Many smaller changes and fixes +new files in LV_functions\</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.50 (25.6.13):</b>
+    <li><b>ARMA 3 Beta</b> compatibility</li>
+    <li>Fixed ambientCombat example mission (waypointType was set to RED insted of SAD)</li>
+    <li>Added beta units in all scripts, subdividing normal & recon groups (support units will mix randomly to both)</li>
+    <li>Changed fillHouse parameter "side": 1 or 2 or 3	(1 = blue team, 2 = red team, 3 = green team)</li>
+    <li>Changed militarize parameter "side": 0 or 1 or 2 or 3 (0 = civilians, 1 = blue team, 2 = red team, 3 = green team)</li>
+    <li>Changed reinforcementChopper parameter "side": 1 or 2 or 3	(1 = blue team, 2 = red team, 3 = green team)</li>
+    <li>Changed reinforcementChopper parameter "type":<br />
+    <div class="inner">If "side" = 1: 1 = B_Heli_Light_01_armed_F, 2 = B_Heli_Light_01_F, 3 = B_Heli_Transport_01_F<br />
+    If "side" = 2: 1 = O_Heli_Attack_02_F, 2 = O_Heli_Attack_02_black_F, 3 = O_Heli_Light_02_F, 4 = O_Heli_Light_02_unarmed_F<br />
+    If "side" = 3: 1 = I_Heli_Transport_02_F
+    </div></li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.42 (5.6.13):</b>
+    <li>added snipers and spotters in every script</li>
+    <li>fixed bug in reinforcementChopper.sqf -> chopper stayed hovering in some locations</li>
+    <li>added ID parameter to reinforcementChopper.sqf</li>
+    <li>changed AI behaviour of infantry group in reinforcementChopper.sqf to "COMBAT" to gain some realism</li>
+    <li>fillHouse.sqf can now be targeted to a marker</li>
+    <li>fixed patrol-vD which had bad typo, it shouldnt give any errors anymore</li>
+    <li>LV_fnc_menGroup.sqf has now also ID parameter, and group size can be set with syntax [amount,random amount]</li>
+    <li>LV_fnc_randomSpot.sqf has now minimum distance and avoid array -parameters. syntax: [center pos,range,min distance,[avoid array]]</li>
+    <li>fixed LV_fnc_vehicleInit -> you can now set eventhandlers to init of units (before this the script considered "_this" as "this" and therefore failed to pass information</li>
+    <li>added first mission/task template: randomSectors1.sqf</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.40 (10.5.13):</b>
+	<li>fixed parameters - you dont need anymore to use all parameters</li>
+    <li>replaced surfaceIsWater -loops with faster ones</li>
+    <li>renamed reinforcementKA60.sqf as reinforcementChopper.sqf
+    <ol style="list-style:disc;">
+    	<li>new parameter: type - you can now select any of the choppers in game (AH9 can also have 1 passenger)</li>
+        <li>new parameter: captive - whole group is captive until chopper has landed (makes sure it wont get shot down "too early")</li>
+        <li>new parameter: patrol - you can no disable infantrys patrol (handy if you want to join group to some other group)<br />
+        +commented place in script where you can easily write custom script to replace patrolling</li>
+        <li>landing spot can now be: object/unit, marker, or position array</li>
+        <li>patrol target can now be: unit/object, marker, array of markers, group, array of groups, or it can be directed to patrol-vD.sqf<br />
+        +new LV_fnc_follow.sqf, which has maximum patrol distance in cases of group/array of groups ("mDis0" in reinforcementChopper.sqf).<br />
+        ++there's commented places where max patrol distance fills up, so you can extend the script easily in those cases.</li>
+    </ol></li>
+    <li>fixed fillHouse error - when found only buildings which has no building positions</li>
+    <li>new parameter in ambientCombat: patrol type - you can use the old method where units moves independently (doMove) to their target location,<br />
+	or you can make them use waypoints as group and define waypointType & waypointBehaviour.</li>
+    <li>militarize.sqf: target -parameter can now be: unit/object, marker, or position array</li>
+    <li>little fixes & cleanups</li>
+	</ol>
+    <ol style="list-style:disc;"><b>0.36 (29.4.13):</b>
+	<li>replaced setVehicleInit commands with execVM and LV_fnc_vehicleInit.sqf</li>
+	</ol>
+    <ol style="list-style:disc;"><b>0.35 (21.4.13):</b>
+    <li>added LV_fnc_removeGroup.sqf, which is used to remove units created via fillHouse or militarize</li>
+    <li>all main scripts:<br />
+    -skills parameter can now be set to "default" when it wont touch the ai skills at all<br />
+    -custom init parameter, now you can add init commands to units</li>
+    <li>fillHouse & militarize & reinforcementKA60:<br />
+    -parameter to define existing group instead of creating new one (so people can target other scripts and stuff to that group)</li>
+    <li>fillHouse & militarize:<br />
+    -unit amounts can now be set also with syntax: [amount,random amount] ( [10,5] = 10+random 5 )<br />
+    -you can define ID for these now, and delete units by referring to that ID via LV_fnc_removeGroup.sqf</li>
+    <li>militarize & reinforcementKA60:<br />
+    -these can now be targeted also to a marker, as long as you remember to use "quotes" with markers</li>
+    <li>ambientCombat:<br />
+    -choppers spawn in air now to prevent the ai heli bug in recent A3<br />
+    -parameter to define direction where ambient will flee when terminated with style 1 in LV_fnc_removeAC.sqf<br />
+    -removed useless parameter 0</li>
+    <li>militarize:<br />
+    -ground vehicles behaviour set to "SAFE" to make them drive better</li>
+    <li>reinforcementKA60:<br />
+    exits script if driver or chopper is shot down</li>
+    <li>all patrol scripts:<br />
+    -if unit < 2m from its waypoint, new location is added (prevents the bug where unit walks small circle around wp)</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.32 (12.4.13):</b>
+    <li>MP fix in militarize.sqf, fillHouse.sqf and reinforcementKA60.sqf</li>
+    <li>added "exact" parameter into reinforcementKA60.sqf, which (when set to false) fixes the bug when KA60s stays hovering near landing spot if there's more than one chopper around</li>
+    <li>updated LV_fnc_follow.sqf: now if units are targeted to another unit, in friendly-friendly case they will patrol around target unit, and in hostile 
+     case they will go straight to target units' position</li>
+     <li>added LV_fnc_randomSpot.sqf, which is now required by reinforcementKA60.sqf</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.30 (7.4.13):</b>
+    <li>new main script; reinforcementKA60.sqf</li>
+    <li>added function to remove ambientCombat</li>
+    <li>added better patrol function for ambientCombat</li>
+	<li>lots of bug fixes, optimizations and lag reduced</li>
+    <li>added new parameters to every main script</li>
+    </ol>
+    <ol style="list-style:disc;"><b>0.23 (30.3.13):</b>
+	<li>fixed stuck loop in militarize.sqf</li>
+    <li>fine tuning of patrol scripts</li>
+    </ol>
+    
+    <hr /><hr />
+    
+    <a name="ss9" id="ss9"></a>
+    <h2><u>Thanks</u></h2>
+    <p>zuff<br />
+    kemor<br />
+    ChrzRw79<br />
+    Dirty Haz<br />
+    O.K<br />
+    vip3r75<br />
+    JojoTheSlayer<br />
+    Gambit<br />
+    FocalFury<br />
+    mikey74<br />
+    tomturner<br />
+    MeatballCB<br />
+    FX2K<br />
+    F2kSel<br />
+    DaSkunk<br />
+    psvialli<br />
+    [GITS]<br />
+    [1PARA]<br />
+    Buster0083<br />
+    Guts4401<br />
+    [2RIMa]Xunga<br />
+    Gary<br />
+    Chris<br />
+    Francois<br />
+    Daniel<br />
+    <br />
+    And everyone else who has supported and given feedback!
+    </p>
+    <br />
+    <hr /><hr />
+    
+    
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+   
+    <!-- end .content --></div>
+  <!-- end .container --></div>
+</body>
+</html>

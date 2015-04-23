@@ -1,3 +1,9 @@
+/*
+	File: 		Sector_addon fillHouse
+	Author: 	GBR Suppe
+	Update: 	23.04.2015
+	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
+*/
 if (!isServer)exitWith{};
 private ["_blueMenArray3","_blueMenArray2","_BLUarrays","_redMenArray2","_OPFarrays","_greenMenArray","_grpId","_customInit","_center","_skls","_skills","_a","_buildings","_rat","_milHQ","_milGroup","_menArray","_i","_newPos","_i2","_unitType","_unit","_building","_sideOption","_blueMenArray","_redMenArray","_bPoss","_patrol","_pFile","_pType"];
 
@@ -91,7 +97,8 @@ while{_i2 < _rat}do{
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
 	_unit setpos _newPos;
 	
-	// mein teil:
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+	
 	_unit setSkill 0.6;
 	_unit forceAddUniform "U_OG_Guerilla1_1";
 	_unit addVest "V_21_EPOCH";
@@ -103,7 +110,8 @@ while{_i2 < _rat}do{
 	_unit setCombatMode "RED";
 	_unit enableAI "TARGET";
 	_unit enableAI "AUTOTARGET";
-	//
+
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 

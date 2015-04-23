@@ -1,3 +1,9 @@
+/*
+	File: 		Sector_addon milli
+	Author: 	GBR Suppe
+	Update: 	23.04.2015
+	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
+*/
 if (!isServer)exitWith{};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
 
@@ -118,7 +124,8 @@ if((_men select 0)||(_men select 1))then{
 		_unit = _milGroup createUnit [_unitType, _pos, [], 0, "NONE"];
 		_unit setPos _pos;
 		
-		// mein teil:
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+
 		_unit setSkill 0.5;
 		_unit forceAddUniform "U_OG_leader";
 		_unit addVest "V_35_EPOCH";
@@ -130,6 +137,8 @@ if((_men select 0)||(_men select 1))then{
 		_unit setCombatMode "RED";
 		_unit enableAI "TARGET";
 		_unit enableAI "AUTOTARGET";
+
+// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 		
 		if(!_still)then{
 			if(_unitType in _menArray)then{
