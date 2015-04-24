@@ -1,0 +1,247 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=10806715;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Markers
+	{
+		items=20;
+		class Item0
+		{
+			position[]={10730.204,27.785189,9842.21};
+			name="sec1";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={11888.169,16.274227,9477.8154};
+			name="sec2";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={10614.161,44.167908,9473.5762};
+			name="sec3";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={10535.901,47.634846,9700.7139};
+			name="sec4";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={11927.506,15.319661,9725.2266};
+			name="sec5";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={11752.538,20.989584,9312.1816};
+			name="sec6";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={10210.58,20.157036,9685.9092};
+			name="sec7";
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={10956.033,54.223591,9138.8359};
+			name="sec8";
+			type="Empty";
+		};
+		class Item8
+		{
+			position[]={11527.778,20.66021,9418.1006};
+			name="sec9";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={10949.705,22.410259,9808.335};
+			name="sec10";
+			type="Empty";
+		};
+		class Item10
+		{
+			position[]={10567.531,8.9849911,10230.228};
+			name="sec11";
+			type="Empty";
+		};
+		class Item11
+		{
+			position[]={11145.855,25.946409,9476.0127};
+			name="sec12";
+			type="Empty";
+		};
+		class Item12
+		{
+			position[]={11154.693,20.799047,9575.2441};
+			name="GBR";
+			text="Sector C";
+			type="mil_dot";
+			colorName="ColorRed";
+		};
+		class Item13
+		{
+			position[]={11157.283,21.103472,9569.5039};
+			name="sec_center";
+			type="Empty";
+		};
+		class Item14
+		{
+			position[]={11411.076,8.7810564,9868.2998};
+			name="sec13";
+			type="Empty";
+		};
+		class Item15
+		{
+			position[]={10177.865,11.235064,9976.3945};
+			name="sec14";
+			type="Empty";
+		};
+		class Item16
+		{
+			position[]={10889.119,93.598167,8763.6475};
+			name="sec15";
+			type="Empty";
+		};
+		class Item17
+		{
+			position[]={10251.709,52.258598,9287.1514};
+			name="sec16";
+			type="Empty";
+		};
+		class Item18
+		{
+			position[]={10862.06,11.700174,10295.942};
+			name="sec17";
+			type="Empty";
+		};
+		class Item19
+		{
+			position[]={11624.919,62.334469,8839.4912};
+			name="sec18";
+			type="Empty";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=3030308;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=15178383;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=10402351;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
