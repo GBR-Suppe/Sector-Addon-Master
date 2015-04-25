@@ -70,5 +70,9 @@ Cooming Soon:
 - Heli Patrol over the Sector Area
 - Anti-Logout in the Sector Area
 
+Credits: (Include)
+- AI Spawn Script Pack by spunFIN
+  http://www.armaholic.com/page.php?id=19832
+
  
 Greetz GBR Suppe
