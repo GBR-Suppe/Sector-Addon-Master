@@ -84,6 +84,8 @@ Cooming Soon:
 Credits: (Include)
 - AI Spawn Script Pack by spunFIN
   http://www.armaholic...ge.php?id=19832
+- Spawncrate by NedFox [TZW]
+  http://epochmod.com/forum/index.php?/topic/32780-community-server-side-mod/
 
  
 
