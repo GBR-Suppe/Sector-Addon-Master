@@ -8,7 +8,7 @@ if (!isServer)exitWith{};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
 
 //Extra options:
-_smokesAndChems = false;
+_smokesAndChems = true;
 _doorHandling = true;
 //
 diag_log "***[Sector] Spawned Sector Guards***";
@@ -262,23 +262,23 @@ if(_smokesAndChems)then{
 						_chance = floor(random 100);
 						if(_chance < 3)exitWith{
 							if("Chemlight_green" in (magazines _x))exitWith{
-								_x fire ["ChemlightGreenMuzzle","ChemlightGreenMuzzle","Chemlight_green"];
+								_x fire ["Chemlight_green","Chemlight_green","Chemlight_green"];
 							};
 							if("Chemlight_red" in (magazines _x))exitWith{
-								_x fire ["ChemlightRedMuzzle","ChemlightRedMuzzle","Chemlight_red"];
+								_x fire ["Chemlight_red","Chemlight_red","Chemlight_red"];
 							};
 							if("Chemlight_yellow" in (magazines _x))exitWith{
-								_x fire ["ChemlightYellowMuzzle","ChemlightYellowMuzzle","Chemlight_yellow"];
+								_x fire ["Chemlight_yellow","Chemlight_yellow","Chemlight_yellow"];
 							};
 							if("Chemlight_blue" in (magazines _x))exitWith{
-								_x fire ["ChemlightBlueMuzzle","ChemlightBlueMuzzle","Chemlight_blue"];
+								_x fire ["Chemlight_blue","Chemlight_blue","Chemlight_blue"];
 							};
 						};
 					};
-					if("SmokeShell" in (magazines _x))exitWith{ 
+					if("SmokeShellGreen" in (magazines _x))exitWith{ 
 						_chance = floor(random 100);
 						if(_chance < 3)exitWith{
-							_x fire ["SmokeShellMuzzle","SmokeShellMuzzle","SmokeShell"];
+							_x fire ["SmokeShellGreen","SmokeShellGreen","SmokeShellGreen"];
 						};
 					};
 				};
