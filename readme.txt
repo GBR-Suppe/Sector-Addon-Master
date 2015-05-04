@@ -28,36 +28,40 @@ Download:
 https://github.com/G...or-Addon-Master
 
 
-Install:
-- Open the Arma3 editor and place 18 marker in your Mission.sqm (Markername: sec1,sec2,sec3,sec4,sec5,sec6,sec7,sec8,sec9,sec10,sec11,sec12,sec13,sec14,sec15,sec16,sec17,sec18)
-                                                                (Markertype=Empty) (look in the "Example Folder" !)
+Install and Configurate:
 
-  *On every marker 4 Soldiers + 1 Random will be spawn, so 72-90 Soldiers will spawn there, if 72-90 are to much, then use only 12 markers or so...
-  The AI patrol in a 300 Meter radius, so every 300 Meter radius one marker (change the radius in the fn_init)
-  
-- Open the Arma3 editor and place 1 marker in your Mission.sqm (Markername: sec_center)
-                                                               (Markertype=Empty) (look in the "Example Folder" !)
-															   
-   *The Lootbox spawn near the "sec_center" marker
-
-- Add Mapcontant in \Sector_addon\mapcontant (Build with A3 3D Editor, export sqf)
-  *place Jammer to stop the Lootspawn and to stop player to build in the zone.*
+- Select your Map from the MPMissions folder. Exchange these with your, or merge them together, or copy the markers in the Arma3 editor in your mission.sqf
   
 - Copy the "sector_addon.pbo" into the folder "@epochhive\addons\"
 
+Optional:
 
-Configurate:
-- Change the Loot in the Spawncrate.sqf (is marked in the Spawncrate.sqf)
+-1- Open the Arma3 editor and place or sort the 18 marker in your Mission.sqm (Markername: sec1,sec2,sec3,sec4,sec5,sec6,sec7,sec8,sec9,sec10,sec11,sec12,sec13,sec14,sec15,sec16,sec17,sec18)
+                                                                              (Markertype=Empty)
+  *On every marker 4 Soldiers + 1 Random will be spawn, so 72-90 Soldiers will spawn there, if 72-90 are to much, then use only 12 markers or so...
+  The AI patrol in a 300 Meter radius, so every 300 Meter radius one marker (change the radius in the fn_init)
+  
+-2- Open the Arma3 editor and place or sort the 1 marker in your Mission.sqm (Markername: sec_center)
+                                                                             (Markertype=Empty) (look in the "Example Folder" !)   
+    *The Lootbox spawn near the "sec_center" marker
 
-- Open Sector_addon\init\fn_init to lower the number the AI (more explanations are in the init itself)
+-3- Add Mapcontant in \Sector_addon\mapcontant (Build with A3 3D Editor, export sqf)
+    *place Jammer to stop the Lootspawn and to stop player to build in the zone.*
 
+-4- Change the Loot in the Spawncrate.sqf (is marked in the Spawncrate.sqf)
+
+-5- Open Sector_addon\scripts\LV\militarize.sqf and fillHouse.sqf to edit the AI, Guns or Items..... (is marked in the .sqf)
+
+-6- Open Sector_addon\init\fn_init to lower the number the AI (more explanations are in the init itself)
+
+  *Info fn_init.sqf, importend are:
   //Millitarize  // Fills area with units.    
   nul = ["Markername",SIDE 3=INDEPENDET,RADIUS AI PATROL,[true,false],[false,false,false],false,[NUMBEROFAI,+RANDOMAINUMBER],[3,0],"default",nil,nil,AI ID FOR SIMPLECACHE]...  (!!! Do not change the Side, 3 is INDEPENDET and correctly !!!)
-  nul = ["sec11",3,300,[true,false],[false,false,false],false,[4,1],[3,0],"default",nil,nil,11] execVM "\x\addons\Sector_addon\scripts\LV\militarize.sqf";
+  nul = ["sec11",        3             ,      300       ,[true,false],[false,false,false],false,[     4    ,     1         ],[3,0],"default",nil,nil,        11           ]...
  
   //FillHouse  //Fills nearest building, OR all buildings in defined range, with soldiers.
-  nul = ["sec1",3,true,2,[4,1],300,"default",nil,nil,1] execVM "\x\addons\Sector_addon\scripts\LV\fillHouse.sqf";
   nul = ["Markername",SIDE 3=INDEPENDET,true,2,[NUMBEROFAI,+RANDOMAINUMBER],RADIUS AI PATROL,"default",nil,nil,AI ID FOR SIMPLECACHE]...   (!!! Do not change the Side, 3 is INDEPENDET and correctly !!!)
+  nul = ["sec1"            3           ,true,2,[           4,1            ],     300        ,"default",nil,nil,       1             ]... 
  
   //simpleCache  // Makes fillHouse and militarize -units spawn when player is near, and despawn when player is further.
   nul = [[  ID,ID,ID ],[TARGET],RADIUS AI WILL SPAWN,true,true]
@@ -65,11 +69,6 @@ Configurate:
  
 
   More Infos in the "Configurate LV" Folder.  Examples are in the "Example Folder".
-  Examples are in the Example Folder.
-  
-  
-Configurate Optional:
-- Open Sector_addon\scripts\LV\militarize.sqf and fillHouse.sqf to edit the AI, Guns or Items..... (is marked in the .sqf)
 
 
 HowTo place Marker:
