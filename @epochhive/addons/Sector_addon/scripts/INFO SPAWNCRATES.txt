@@ -1,0 +1,2 @@
+Optional:
+Change the Loot, numberofcrates or other configurates

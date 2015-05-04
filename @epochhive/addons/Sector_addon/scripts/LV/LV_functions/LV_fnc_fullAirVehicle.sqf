@@ -5,6 +5,7 @@
 	File: 		Sector_addon fullair
 	Author: 	GBR Suppe
 	Update: 	23.04.2015
+	Version: 	0.0.1a
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_INDhq","_INDgrp","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_pos1","_veh1","_vehSpots","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];

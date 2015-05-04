@@ -1,23 +1,21 @@
 /*
 	File: 		Sector_addon init
 	Author: 	GBR Suppe
-	Update: 	23.04.2015
-	Version: 	0.0.1 alpha
+	Update: 	04.05.2015
+	Version: 	0.0.1c
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 
 diag_log "***[SECTOR] Starting Sector_Addon***";
 
-// load the mapcontant, buildings or so.....
-call compile preprocessFileLineNumbers "\x\addons\Sector_addon\mapcontant\sector.sqf";
+// load the mapcontant, buildings or so.....                  // !!! remove the // from the start of the next Line if you added contant in the sector.sqf !!!
+//call compile preprocessFileLineNumbers "\x\addons\Sector_addon\mapcontant\sector.sqf";
 
 // load the box or boxes with loot.... // open \Sector_addon\scripts\spawncrates.sqf" to configurate the loot and the coords !
 call compile preprocessFileLineNumbers "\x\addons\Sector_addon\scripts\spawncrates.sqf";
 
 
-
 // AI spawn start here // AI spawn start here // AI spawn start here // AI spawn start here // AI spawn start here // AI spawn start here // AI spawn start here //
-
 
 //heli  // spawned a heli, but its not ready !
 //nul = ["sec_center",3,500,[false,false],[false,false,true],false,[10,0],[1,0],"default",nil,nil,99] execVM "\x\addons\Sector_addon\scripts\LV\militarize.sqf";
@@ -55,7 +53,6 @@ nul = ["sec18",3,300,[true,false],[false,false,false],false,[4,1],[3,0],"default
 //nul = ["sec8",3,300,[true,false],[false,false,false],false,[4,1],[3,0],"default",nil,nil,8] execVM "\x\addons\Sector_addon\scripts\LV\militarize.sqf";
 //nul = ["sec9",3,300,[true,false],[false,false,false],false,[4,1],[3,0],"default",nil,nil,9] execVM "\x\addons\Sector_addon\scripts\LV\militarize.sqf";
 //nul = ["sec10",3,300,[true,false],[false,false,false],false,[4,1],[3,0],"default",nil,nil,10] execVM "\x\addons\Sector_addon\scripts\LV\militarize.sqf";
-
 
 // AI spawn end here // AI spawn end here // AI spawn end here // AI spawn end here // AI spawn end here // AI spawn end here // AI spawn end here // AI spawn end here // 
 

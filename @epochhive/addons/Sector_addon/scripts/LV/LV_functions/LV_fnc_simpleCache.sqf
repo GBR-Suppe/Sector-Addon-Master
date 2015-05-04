@@ -2,7 +2,7 @@ if (!isServer)exitWith{};
 private ["_mp","_i","_cPos","_inRange","_aliveCount","_grp","_center","_scriptParams","_id","_ids","_units","_distance","_amountArr","_script","_params","_vehicleAmount","_vehicleArr","_excludeSingleHeliPilot","_inRangeUnits","_pilotCandidate"];
 
 //Additional settings:
-_excludeSingleHeliPilot = true; 		//true = if single player flies over area as pilot, area wont trigger (reduces lag)
+_excludeSingleHeliPilot = false; 		//true = if single player flies over area as pilot, area wont trigger (reduces lag)
 
 _ids = _this select 0;
 _units = _this select 1;

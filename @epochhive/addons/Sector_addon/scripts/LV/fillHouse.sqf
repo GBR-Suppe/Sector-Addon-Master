@@ -1,7 +1,8 @@
 /*
 	File: 		Sector_addon fillHouse
 	Author: 	GBR Suppe
-	Update: 	23.04.2015
+	Update: 	04.05.2015
+	Version: 	0.0.1c
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 if (!isServer)exitWith{};
@@ -99,17 +100,19 @@ while{_i2 < _rat}do{
 	
 // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 	
-	_unit setSkill 0.6;
+	_unit setSkill 0.7;
 	_unit forceAddUniform "U_OG_Guerilla1_1";
-	_unit addVest "V_21_EPOCH";
+	_unit addVest "V_22_EPOCH";
 				
 	_unit addWeapon "SMG_02_F";
 	_unit addMagazines [("30Rnd_9x21_Mag"), 6];
 	_unit addPrimaryWeaponItem "optic_Arco";
 	
-	_unit setCombatMode "RED";
+	_unit setBehaviour "CARELESS";
+	_unit setCombatMode "RED";   //"BLUE";
 	_unit enableAI "TARGET";
 	_unit enableAI "AUTOTARGET";
+	_unit enableAI "FSM";
 
 // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 	
