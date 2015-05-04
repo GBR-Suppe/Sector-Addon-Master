@@ -1,8 +1,7 @@
-Altis example ready for Testing and looking !!!!!!!!!
+This is a working Altis Example !!!! But, it is just an example !!!! please sort the markers in the Arma3 Editor and add more houses...
 
+In this case is Millitarized and FillHouse aktive in Selakano. (in the south of Altis)
 
-in the mission.sqm is just an example !!!! please sort the markers in the Arma3 Editor and add more houses...
-
-Info:
+Info: (by default)
 Marker 1-10 fills all buildings in defined range, with soldiers., so u need more houses there.....
 Marker 11-18 are Millitarize, Fills area with units. work without houses.

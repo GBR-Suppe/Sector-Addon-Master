@@ -3,46 +3,30 @@ class Mission
 {
 	addOns[]=
 	{
-		"A3_Soft_F_Car",
-		"A3_Soft_F_Quadbike",
-		"a3_soft_f_beta_quadbike",
-		"A3_Boat_F_Civilian_Boat",
-		"A3_Boat_F_Boat_Transport_01",
-		"A3_Air_F_Heli_Light_01",
-		"A3_Air_F_Heli_Heli_Transport_04",
-		"A3_Air_F_Heli_Heli_Transport_03",
-		"a3_map_altis",
-		"a3_characters_f_gamma",
-		"A3_Characters_F_OPFOR",
-		"A3_Characters_F_INDEP",
-		"A3_Characters_F_Civil",
-		"A3_epoch_config",
-		"a3_characters_f",
-		"A3_Data_F_Curator_Virtual"
+		"a3_epoch_config",
+		"tavi"
 	};
 	addOnsAuto[]=
 	{
 		"a3_epoch_config",
-		"a3_map_altis"
+		"tavi"
 	};
-	randomSeed=12032465;
+	randomSeed=14294771;
 	class Intel
 	{
-		briefingName="Epoch Mod";
-		resistanceWest=0;
-		timeOfChanges=28800;
-		startWeather=0;
-		startWind=0;
-		forecastWeather=0;
-		forecastWind=0;
-		forecastWaves=0;
-		wavesForced=1;
-		windForced=1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
-		minute=55;
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=1987;
+		month=10;
+		day=15;
+		hour=6;
+		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -57,13 +41,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.076,3.1900001,17997.086};
-					azimut=136.241;
+					position[]={938.93176,2.0357666,25015.842};
+					azimut=159.84946;
 					special="NONE";
 					id=0;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -77,13 +60,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.369,3.1900001,18001.078};
-					azimut=130.01601;
+					position[]={939.88293,2.0357666,25019.783};
+					azimut=153.62447;
 					special="NONE";
 					id=1;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -97,13 +79,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.404,3.1900001,17999.449};
-					azimut=130.01601;
+					position[]={942.92981,2.0357666,25016.674};
+					azimut=153.62447;
 					special="NONE";
 					id=2;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -117,13 +98,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.268,3.1900001,18004.947};
-					azimut=130.01601;
+					position[]={947.75403,2.0357666,25020.564};
+					azimut=153.62447;
 					special="NONE";
 					id=3;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -137,13 +117,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.803,3.1900001,18001.781};
-					azimut=130.01601;
+					position[]={939.64465,2.0357666,25020.654};
+					azimut=153.62447;
 					special="NONE";
 					id=4;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -157,13 +136,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.908,3.1900001,18002.363};
-					azimut=130.01601;
+					position[]={939.05872,2.0357666,25021.545};
+					azimut=153.62447;
 					special="NONE";
 					id=5;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -177,13 +155,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.15,3.1900001,18004.951};
-					azimut=130.01601;
+					position[]={944.90051,2.0357666,25021.814};
+					azimut=153.62447;
 					special="NONE";
 					id=6;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -197,13 +174,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.346,3.1900001,18003.178};
-					azimut=130.01601;
+					position[]={946.20129,2.0357666,25019.311};
+					azimut=153.62447;
 					special="NONE";
 					id=7;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -217,13 +193,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.592,3.1900001,18003.709};
-					azimut=130.01601;
+					position[]={944.80481,2.0357666,25020.502};
+					azimut=153.62447;
 					special="NONE";
 					id=8;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -237,13 +212,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.852,3.1900001,18004.229};
-					azimut=130.01601;
+					position[]={948.00012,2.0357666,25019.674};
+					azimut=153.62447;
 					special="NONE";
 					id=9;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -257,13 +231,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.193,3.1900001,17998.184};
-					azimut=130.01601;
+					position[]={937.64661,2.0357666,25017.604};
+					azimut=153.62447;
 					special="NONE";
 					id=10;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -277,13 +250,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.244,3.1900001,17997.719};
-					azimut=130.01601;
+					position[]={938.42395,2.0357666,25016.756};
+					azimut=153.62447;
 					special="NONE";
 					id=11;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -297,13 +269,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.861,3.1900001,18001.973};
-					azimut=130.01601;
+					position[]={940.69348,2.0357666,25020.408};
+					azimut=153.62447;
 					special="NONE";
 					id=12;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -317,13 +288,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.881,3.1900001,17999.535};
-					azimut=130.01601;
+					position[]={939.7345,2.0357666,25018.166};
+					azimut=153.62447;
 					special="NONE";
 					id=13;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -337,13 +307,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.443,3.1900001,18001.371};
-					azimut=130.01601;
+					position[]={940.98645,2.0357666,25019.623};
+					azimut=153.62447;
 					special="NONE";
 					id=14;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -357,13 +326,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.709,3.1900001,17997.355};
-					azimut=130.01601;
+					position[]={943.28528,2.0357666,25014.236};
+					azimut=153.62447;
 					special="NONE";
 					id=15;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -377,13 +345,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.9,3.1900001,17996.113};
-					azimut=130.01601;
+					position[]={940.21497,2.0357666,25014.221};
+					azimut=153.62447;
 					special="NONE";
 					id=16;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -397,13 +364,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.613,3.1900001,17996.719};
-					azimut=130.01601;
+					position[]={943.8595,2.0357666,25013.287};
+					azimut=153.62447;
 					special="NONE";
 					id=17;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -417,13 +383,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.072,3.1900001,18004.713};
-					azimut=130.01601;
+					position[]={943.81458,2.0357666,25022.029};
+					azimut=153.62447;
 					special="NONE";
 					id=18;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -437,13 +402,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.26,3.1900001,18005.248};
-					azimut=130.01601;
+					position[]={946.03137,2.0357666,25021.643};
+					azimut=153.62447;
 					special="NONE";
 					id=19;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -457,13 +421,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.861,3.1900001,18001.625};
-					azimut=136.241;
+					position[]={942.38684,2.0357666,25019.287};
+					azimut=159.84946;
 					special="NONE";
 					id=20;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -477,13 +440,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.701,3.1900001,17998.156};
-					azimut=130.01601;
+					position[]={940.84973,2.0357666,25016.17};
+					azimut=153.62447;
 					special="NONE";
 					id=21;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -497,13 +459,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.656,3.1900001,17998.496};
-					azimut=130.01601;
+					position[]={941.86145,2.0357666,25016.1};
+					azimut=153.62447;
 					special="NONE";
 					id=22;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -517,13 +478,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.846,3.1900001,18004.408};
-					azimut=130.01601;
+					position[]={945.31848,2.0357666,25021.045};
+					azimut=153.62447;
 					special="NONE";
 					id=23;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -537,13 +497,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.217,3.1900001,17997.313};
-					azimut=130.01601;
+					position[]={940.06653,2.0357666,25015.592};
+					azimut=153.62447;
 					special="NONE";
 					id=24;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -557,13 +516,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.777,3.1900001,18004.135};
-					azimut=130.01601;
+					position[]={944.22864,2.0357666,25021.217};
+					azimut=153.62447;
 					special="NONE";
 					id=25;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -577,13 +535,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.467,3.1900001,18005.467};
-					azimut=130.01601;
+					position[]={947.22864,2.0357666,25021.365};
+					azimut=153.62447;
 					special="NONE";
 					id=26;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -597,13 +554,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.43,3.1900001,18003.377};
-					azimut=130.01601;
+					position[]={947.27356,2.0357666,25019.064};
+					azimut=153.62447;
 					special="NONE";
 					id=27;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -617,13 +573,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.926,3.1900001,18002.125};
-					azimut=130.01601;
+					position[]={941.72864,2.0357666,25020.119};
+					azimut=153.62447;
 					special="NONE";
 					id=28;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -637,13 +592,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.029,3.1900001,17996.461};
-					azimut=130.01601;
+					position[]={939.55481,2.0357666,25014.889};
+					azimut=153.62447;
 					special="NONE";
 					id=29;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -657,13 +611,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.24,3.1900001,17999.023};
-					azimut=130.01601;
+					position[]={944.44153,2.0357666,25015.549};
+					azimut=153.62447;
 					special="NONE";
 					id=30;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -677,13 +630,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.807,3.1900001,18000.176};
-					azimut=130.01601;
+					position[]={946.33801,2.0357666,25015.979};
+					azimut=153.62447;
 					special="NONE";
 					id=31;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -697,13 +649,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.146,3.1900001,17999.828};
-					azimut=130.01601;
+					position[]={941.01184,2.0357666,25017.928};
+					azimut=153.62447;
 					special="NONE";
 					id=32;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -717,13 +668,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.385,3.1900001,17997.945};
-					azimut=130.01601;
+					position[]={939.55872,2.0357666,25016.506};
+					azimut=153.62447;
 					special="NONE";
 					id=33;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -737,13 +687,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.672,3.1900001,17999.164};
-					azimut=130.01601;
+					position[]={938.47668,2.0357666,25018.307};
+					azimut=153.62447;
 					special="NONE";
 					id=34;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -757,13 +706,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.252,3.1900001,18002.691};
-					azimut=130.01601;
+					position[]={944.08801,2.0357666,25019.705};
+					azimut=153.62447;
 					special="NONE";
 					id=35;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -777,13 +725,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.842,3.1900001,18004.342};
-					azimut=130.01601;
+					position[]={941.62122,2.0357666,25022.584};
+					azimut=153.62447;
 					special="NONE";
 					id=36;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -797,13 +744,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.713,3.1900001,18001.563};
-					azimut=130.01601;
+					position[]={938.55872,2.0357666,25020.893};
+					azimut=153.62447;
 					special="NONE";
 					id=37;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -817,13 +763,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23605.137,3.1900001,17998.723};
-					azimut=130.01601;
+					position[]={946.05676,2.0357666,25014.514};
+					azimut=153.62447;
 					special="NONE";
 					id=38;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -837,13 +782,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.371,3.1900001,18002.982};
-					azimut=130.01601;
+					position[]={945.23059,2.0357666,25019.525};
+					azimut=153.62447;
 					special="NONE";
 					id=39;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -857,13 +801,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.451,3.1900001,17999.723};
-					azimut=136.241;
+					position[]={943.99817,2.0357666,25016.506};
+					azimut=159.84946;
 					special="NONE";
 					id=40;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -877,13 +820,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.908,3.1900001,17997.27};
-					azimut=130.01601;
+					position[]={937.01965,2.0357666,25016.881};
+					azimut=153.62447;
 					special="NONE";
 					id=41;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -897,13 +839,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.857,3.1900001,17998.961};
-					azimut=130.01601;
+					position[]={940.39856,2.0357666,25017.248};
+					azimut=153.62447;
 					special="NONE";
 					id=42;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -917,13 +858,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23594.789,3.1900001,18002.137};
-					azimut=130.01601;
+					position[]={937.94348,2.0357666,25021.787};
+					azimut=153.62447;
 					special="NONE";
 					id=43;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -937,13 +877,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.102,3.1900001,18002.547};
-					azimut=130.01601;
+					position[]={942.97473,2.0357666,25020.033};
+					azimut=153.62447;
 					special="NONE";
 					id=44;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -957,13 +896,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.32,3.1900001,18002.982};
-					azimut=130.01601;
+					position[]={938.7677,2.0357666,25022.35};
+					azimut=153.62447;
 					special="NONE";
 					id=45;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -977,13 +915,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.018,3.1900001,18002.719};
-					azimut=130.01601;
+					position[]={940.21887,2.0357666,25021.424};
+					azimut=153.62447;
 					special="NONE";
 					id=46;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -997,13 +934,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.066,3.1900001,18004.674};
-					azimut=130.01601;
+					position[]={946.54309,2.0357666,25020.795};
+					azimut=153.62447;
 					special="NONE";
 					id=47;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1017,13 +953,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.342,3.1900001,18003.076};
-					azimut=130.01601;
+					position[]={942.49231,2.0357666,25020.826};
+					azimut=153.62447;
 					special="NONE";
 					id=48;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1037,13 +972,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.994,3.1900001,18001.965};
-					azimut=130.01601;
+					position[]={943.55872,2.0357666,25019.143};
+					azimut=153.62447;
 					special="NONE";
 					id=49;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1057,13 +991,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.236,3.1900001,18000.738};
-					azimut=130.01601;
+					position[]={937.79309,2.0357666,25020.326};
+					azimut=153.62447;
 					special="NONE";
 					id=50;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1077,13 +1010,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.453,3.1900001,18000.145};
-					azimut=130.01601;
+					position[]={942.33606,2.0357666,25017.693};
+					azimut=153.62447;
 					special="NONE";
 					id=51;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1097,13 +1029,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.479,3.1900001,18003.592};
-					azimut=130.01601;
+					position[]={940.99231,2.0357666,25022.049};
+					azimut=153.62447;
 					special="NONE";
 					id=52;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1117,13 +1048,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.527,3.1900001,17997.145};
-					azimut=130.01601;
+					position[]={942.11731,2.0357666,25014.514};
+					azimut=153.62447;
 					special="NONE";
 					id=53;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1137,13 +1067,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.871,3.1900001,18004.521};
-					azimut=130.01601;
+					position[]={942.63879,2.0357666,25022.338};
+					azimut=153.62447;
 					special="NONE";
 					id=54;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1157,13 +1086,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.088,3.1900001,18002.113};
-					azimut=130.01601;
+					position[]={944.62317,2.0357666,25018.842};
+					azimut=153.62447;
 					special="NONE";
 					id=55;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1177,13 +1105,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.791,3.1900001,18003.955};
-					azimut=130.01601;
+					position[]={946.92004,2.0357666,25019.846};
+					azimut=153.62447;
 					special="NONE";
 					id=56;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1197,13 +1124,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.287,3.1900001,18000.84};
-					azimut=130.01601;
+					position[]={938.79504,2.0357666,25019.998};
+					azimut=153.62447;
 					special="NONE";
 					id=57;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1217,13 +1143,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23594.566,3.1900001,18003.627};
-					azimut=130.01601;
+					position[]={938.33606,2.0357666,25023.244};
+					azimut=153.62447;
 					special="NONE";
 					id=58;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1237,13 +1162,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.713,3.1900001,18004.014};
-					azimut=130.01601;
+					position[]={943.20325,2.0357666,25021.533};
+					azimut=153.62447;
 					special="NONE";
 					id=59;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1257,13 +1181,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.156,3.1900001,17998.566};
-					azimut=136.241;
+					position[]={943.26379,2.0357666,25015.564};
+					azimut=159.84946;
 					special="NONE";
 					id=60;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1277,13 +1200,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.576,3.1900001,18000.422};
-					azimut=130.01601;
+					position[]={943.47668,2.0357666,25017.498};
+					azimut=153.62447;
 					special="NONE";
 					id=61;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1297,13 +1219,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.018,3.1900001,17999.32};
-					azimut=130.01601;
+					position[]={941.60559,2.0357666,25017.115};
+					azimut=153.62447;
 					special="NONE";
 					id=62;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1317,13 +1238,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.398,3.1900001,18002.602};
-					azimut=130.01601;
+					position[]={946.93372,2.0357666,25018.365};
+					azimut=153.62447;
 					special="NONE";
 					id=63;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1337,13 +1257,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.42,3.1900001,17998.688};
-					azimut=130.01601;
+					position[]={938.97278,2.0357666,25017.572};
+					azimut=153.62447;
 					special="NONE";
 					id=64;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1357,13 +1276,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.264,3.1900001,18003.271};
-					azimut=130.01601;
+					position[]={939.74817,2.0357666,25022.232};
+					azimut=153.62447;
 					special="NONE";
 					id=65;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1377,13 +1295,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.604,3.1900001,18003.924};
-					azimut=130.01601;
+					position[]={945.81848,2.0357666,25020.291};
+					azimut=153.62447;
 					special="NONE";
 					id=66;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1397,13 +1314,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.635,3.1900001,18003.873};
-					azimut=130.01601;
+					position[]={939.41418,2.0357666,25023.041};
+					azimut=153.62447;
 					special="NONE";
 					id=67;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1417,13 +1333,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.389,3.1900001,18003.408};
-					azimut=130.01601;
+					position[]={943.5802,2.0357666,25020.709};
+					azimut=153.62447;
 					special="NONE";
 					id=68;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1437,13 +1352,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.217,3.1900001,18002.438};
-					azimut=130.01601;
+					position[]={945.78528,2.0357666,25018.686};
+					azimut=153.62447;
 					special="NONE";
 					id=69;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1457,13 +1371,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.061,3.1900001,18000.16};
-					azimut=130.01601;
+					position[]={939.23059,2.0357666,25019.068};
+					azimut=153.62447;
 					special="NONE";
 					id=70;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1477,13 +1390,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23605.105,3.1900001,18001.156};
-					azimut=130.01601;
+					position[]={947.00403,2.0357666,25016.756};
+					azimut=153.62447;
 					special="NONE";
 					id=71;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1497,13 +1409,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.502,3.1900001,18003.727};
-					azimut=130.01601;
+					position[]={941.98254,2.0357666,25021.756};
+					azimut=153.62447;
 					special="NONE";
 					id=72;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1517,13 +1428,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.924,3.1900001,17998.371};
-					azimut=130.01601;
+					position[]={944.80481,2.0357666,25014.678};
+					azimut=153.62447;
 					special="NONE";
 					id=73;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1537,13 +1447,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.111,3.1900001,18002.885};
-					azimut=130.01601;
+					position[]={941.28528,2.0357666,25021.139};
+					azimut=153.62447;
 					special="NONE";
 					id=74;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1557,13 +1466,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.773,3.1900001,18000.68};
-					azimut=130.01601;
+					position[]={944.6759,2.0357666,25017.256};
+					azimut=153.62447;
 					special="NONE";
 					id=75;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1577,13 +1485,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.725,3.1900001,18004.08};
-					azimut=130.01601;
+					position[]={940.49426,2.0357666,25022.791};
+					azimut=153.62447;
 					special="NONE";
 					id=76;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1597,13 +1504,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.33,3.1900001,17996.543};
-					azimut=130.01601;
+					position[]={942.6134,2.0357666,25013.643};
+					azimut=153.62447;
 					special="NONE";
 					id=77;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1617,13 +1523,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.998,3.1900001,18000.844};
-					azimut=130.01601;
+					position[]={945.86145,2.0357666,25016.916};
+					azimut=153.62447;
 					special="NONE";
 					id=78;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1637,13 +1542,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.889,3.1900001,17999.91};
-					azimut=130.01601;
+					position[]={938.05872,2.0357666,25019.307};
+					azimut=153.62447;
 					special="NONE";
 					id=79;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1657,13 +1561,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23598.264,3.1900001,18000.516};
-					azimut=130.01601;
+					position[]={940.47864,2.0357666,25018.908};
+					azimut=153.62447;
 					special="NONE";
 					id=80;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1677,13 +1580,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.748,3.1900001,18001.055};
-					azimut=130.01601;
+					position[]={942.96887,2.0357666,25018.412};
+					azimut=153.62447;
 					special="NONE";
 					id=81;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1697,13 +1599,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.807,3.1900001,18001.309};
-					azimut=130.01601;
+					position[]={944.04114,2.0357666,25018.217};
+					azimut=153.62447;
 					special="NONE";
 					id=82;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1717,13 +1618,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23595.494,3.1900001,17999.008};
-					azimut=130.01601;
+					position[]={937.33606,2.0357666,25018.639};
+					azimut=153.62447;
 					special="NONE";
 					id=83;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1737,13 +1637,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23599.424,3.1900001,18000.742};
-					azimut=130.01601;
+					position[]={941.63098,2.0357666,25018.654};
+					azimut=153.62447;
 					special="NONE";
 					id=84;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1757,13 +1656,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23605.248,3.1900001,18001.883};
-					azimut=130.01601;
+					position[]={947.42395,2.0357666,25017.365};
+					azimut=153.62447;
 					special="NONE";
 					id=85;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1777,13 +1675,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.031,3.1900001,18001.461};
-					azimut=130.01601;
+					position[]={945.22473,2.0357666,25017.869};
+					azimut=153.62447;
 					special="NONE";
 					id=86;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1797,13 +1694,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.232,3.1900001,17996.859};
-					azimut=130.01601;
+					position[]={940.81653,2.0357666,25014.771};
+					azimut=153.62447;
 					special="NONE";
 					id=87;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1817,13 +1713,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.307,3.1900001,17999.313};
-					azimut=130.01601;
+					position[]={945.53333,2.0357666,25015.385};
+					azimut=153.62447;
 					special="NONE";
 					id=88;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1837,13 +1732,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23604.158,3.1900001,18001.711};
-					azimut=130.01601;
+					position[]={946.35559,2.0357666,25017.643};
+					azimut=153.62447;
 					special="NONE";
 					id=89;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1857,13 +1751,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23597.924,3.1900001,17996.32};
-					azimut=130.01601;
+					position[]={938.48645,2.0357666,25015.205};
+					azimut=153.62447;
 					special="NONE";
 					id=90;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1877,13 +1770,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.17,3.1900001,17996.34};
-					azimut=130.01601;
+					position[]={941.46887,2.0357666,25013.92};
+					azimut=153.62447;
 					special="NONE";
 					id=91;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1897,13 +1789,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.838,3.1900001,17997.523};
-					azimut=130.01601;
+					position[]={944.38684,2.0357666,25013.939};
+					azimut=153.62447;
 					special="NONE";
 					id=92;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1917,13 +1808,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23596.939,3.1900001,17996.711};
-					azimut=130.01601;
+					position[]={937.74036,2.0357666,25015.951};
+					azimut=153.62447;
 					special="NONE";
 					id=93;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1937,13 +1827,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23605.551,3.1900001,17999.484};
-					azimut=130.01601;
+					position[]={946.74231,2.0357666,25015.045};
+					azimut=153.62447;
 					special="NONE";
 					id=94;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1957,13 +1846,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23601.803,3.1900001,17997.871};
-					azimut=130.01601;
+					position[]={942.66223,2.0357666,25015.068};
+					azimut=153.62447;
 					special="NONE";
 					id=95;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1977,13 +1865,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23603.604,3.1900001,18000.102};
-					azimut=130.01601;
+					position[]={945.2052,2.0357666,25016.389};
+					azimut=153.62447;
 					special="NONE";
 					id=96;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -1997,13 +1884,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23602.979,3.1900001,17998.066};
-					azimut=130.01601;
+					position[]={943.81653,2.0357666,25014.779};
+					azimut=153.62447;
 					special="NONE";
 					id=97;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -2017,13 +1903,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23600.6,3.1900001,17997.535};
-					azimut=130.01601;
+					position[]={941.4259,2.0357666,25015.244};
+					azimut=153.62447;
 					special="NONE";
 					id=98;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -2037,13 +1922,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={23605.094,3.1900001,17998.143};
-					azimut=130.01601;
+					position[]={945.78528,2.0357666,25013.998};
+					azimut=153.62447;
 					special="NONE";
 					id=99;
 					side="CIV";
 					vehicle="VirtualMan_EPOCH";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 				};
@@ -2052,142 +1936,138 @@ class Mission
 	};
 	class Markers
 	{
-		items=23;
+		items=22;
 		class Item0
 		{
-			position[]={14939.934,0.053499073,15083.272};
-			name="center";
+			position[]={942.40051,2.0357666,25018.354};
+			name="respawn_east";
 			type="Empty";
+			angle=23.608498;
 		};
 		class Item1
 		{
-			position[]={23600.639,3.1900001,18000.721};
-			name="respawn_east";
+			position[]={942.43176,2.0357666,25018.361};
+			name="respawn_west";
 			type="Empty";
+			angle=23.608498;
 		};
 		class Item2
 		{
-			position[]={23600.611,3.1900001,18000.768};
-			name="respawn_west";
+			position[]={22462.256,6.3348389,19479.736};
+			name="sec1";
 			type="Empty";
 		};
 		class Item3
 		{
-			position[]={20836.127,35.127815,6775.5469};
-			name="sec1";
+			position[]={23064.258,6.3348389,19372.781};
+			name="sec2";
 			type="Empty";
 		};
 		class Item4
 		{
-			position[]={20785.9,38.468998,6712.6953};
-			name="sec2";
+			position[]={22881.527,6.3348389,19871.275};
+			name="sec3";
 			type="Empty";
 		};
 		class Item5
 		{
-			position[]={20857.877,44.155319,6563.6743};
-			name="sec3";
+			position[]={22394.691,6.3348389,19671.625};
+			name="sec8";
 			type="Empty";
 		};
 		class Item6
 		{
-			position[]={20748.465,37.364357,6802.0752};
-			name="sec8";
+			position[]={22296.848,6.3348389,19853.531};
+			name="sec7";
 			type="Empty";
 		};
 		class Item7
 		{
-			position[]={20669.07,36.950283,6942.4277};
-			name="sec7";
+			position[]={22933.697,6.3348389,19275.984};
+			name="sec6";
 			type="Empty";
 		};
 		class Item8
 		{
-			position[]={20808.646,34.506149,6824.2568};
-			name="sec6";
+			position[]={22297.154,6.3348389,19960.475};
+			name="sec4";
 			type="Empty";
 		};
 		class Item9
 		{
-			position[]={20686.166,40.089058,6831.9077};
-			name="sec4";
+			position[]={22203.238,6.3348389,19521.197};
+			name="sec9";
 			type="Empty";
 		};
 		class Item10
 		{
-			position[]={20696.652,39.503807,6770.1123};
-			name="sec9";
+			position[]={22498.326,6.3348389,20053.889};
+			name="sec5";
 			type="Empty";
 		};
 		class Item11
 		{
-			position[]={20806.459,41.401077,6657.2515};
-			name="sec5";
+			position[]={22906.49,6.3348389,19844.715};
+			name="sec10";
 			type="Empty";
 		};
 		class Item12
 		{
-			position[]={20878.496,30.711626,6835.6235};
-			name="sec10";
+			position[]={21854.398,6.0124369,19707.207};
+			name="sec11";
 			type="Empty";
 		};
 		class Item13
 		{
-			position[]={20972.35,27.124306,6814.3555};
-			name="sec11";
+			position[]={22340.908,6.3348389,20094.803};
+			name="sec16";
 			type="Empty";
 		};
 		class Item14
 		{
-			position[]={20974.725,33.218864,6575.4717};
-			name="sec16";
+			position[]={22665.91,6.3348389,20122.254};
+			name="sec12";
 			type="Empty";
 		};
 		class Item15
 		{
-			position[]={20993.707,27.901234,6703.626};
-			name="sec12";
+			position[]={22417.203,6.3348389,19244.715};
+			name="sec14";
 			type="Empty";
 		};
 		class Item16
 		{
-			position[]={20851.373,29.701269,6903.54};
-			name="sec14";
+			position[]={22266.254,6.3348389,19665.143};
+			name="sec15";
 			type="Empty";
 		};
 		class Item17
 		{
-			position[]={20755.73,34.802238,6880.7549};
-			name="sec15";
+			position[]={22447.564,6.3348389,19870.355};
+			name="sec18";
 			type="Empty";
 		};
 		class Item18
 		{
-			position[]={20629.818,53.007675,6650.4268};
-			name="sec18";
+			position[]={23006.117,6.3348389,19742.5};
+			name="sec13";
 			type="Empty";
 		};
 		class Item19
 		{
-			position[]={20720.539,58.690613,6581.8315};
-			name="sec13";
+			position[]={22222.963,6.3348389,19395.092};
+			name="sec17";
 			type="Empty";
 		};
 		class Item20
 		{
-			position[]={20614.98,44.274097,6775.5991};
-			name="sec17";
+			position[]={22182.805,6.3348389,19852.77};
+			name="sec_center";
 			type="Empty";
 		};
 		class Item21
 		{
-			position[]={20794.232,35.995308,6766.626};
-			name="sec_center";
-			type="Empty";
-		};
-		class Item22
-		{
-			position[]={20915.053,30.237787,6770.9189};
+			position[]={22571.012,1.874907,20422.225};
 			name="sec_center2";
 			text="Sector C";
 			type="mil_dot";
@@ -2199,27 +2079,27 @@ class Intro
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
-	randomSeed=13802307;
+	randomSeed=8507954;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
+		startWeather=0.1;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.30000001;
+		forecastWeather=0.40000001;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
+		year=1987;
+		month=10;
+		day=15;
+		hour=6;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -2229,27 +2109,27 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
-	randomSeed=4712975;
+	randomSeed=16559215;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
+		startWeather=0.1;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.30000001;
+		forecastWeather=0.40000001;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
+		year=1987;
+		month=10;
+		day=15;
+		hour=6;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -2259,27 +2139,27 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"tavi"
 	};
-	randomSeed=10755213;
+	randomSeed=5287881;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
+		startWeather=0.1;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.30000001;
+		forecastWeather=0.40000001;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
+		year=1987;
+		month=10;
+		day=15;
+		hour=6;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
