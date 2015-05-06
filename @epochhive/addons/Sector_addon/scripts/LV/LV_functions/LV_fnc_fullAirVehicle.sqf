@@ -3,16 +3,16 @@
 	Spawns random vehicle full of random units and returns driver 
 	
 	File: 		Sector_addon fullair
-	Author: 	GBR Suppe
-	Update: 	23.04.2015
-	Version: 	0.0.1a
+	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
+	Edition:	GBR Suppe edition
+	Update: 	06.05.2015
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_INDhq","_INDgrp","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_pos1","_veh1","_vehSpots","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];
 _pos = _this select 0;
 _side = _this select 1;
 
-diag_log "***[Sector] Spawn Heli***";
+diag_log "***[Sector] Spawn the Heli***";
 
 _BLUveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
 _OPFveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
@@ -47,9 +47,11 @@ _veh1 = _veh select (floor(random(count _veh)));
 _vehSpots = getNumber (configFile >> "CfgVehicles" >> _veh1 >> "transportSoldier");
 
 _vehicle = createVehicle [_veh1, _pos1, [], 0, "FLY"];
+_vehicle setVariable ["BIS_enableRandomization", false];
 
-_vehicle call EPOCH_server_vehicleInit;
 _vehicle call EPOCH_server_setVToken;
+_vehicle call EPOCH_server_vehicleInit;
+
 
 _vCrew = [_vehicle, _grp] call BIS_fnc_spawnCrew;
 

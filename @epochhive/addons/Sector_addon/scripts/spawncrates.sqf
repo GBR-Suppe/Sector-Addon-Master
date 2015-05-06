@@ -6,11 +6,16 @@
 */
 if (isServer) then {
 
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ******************************Configurate START********************************* */
 
-_numberofcrates = 3;								// this is the number of crates that you want to spawn							
+_numberofcrates = 1;								// this is the number of crates that you want to spawn
+
+// Box spawn on Coordiantes: (not aktiv)								
 //_spawnCenter = [16529.719,18420.574,34.364796]; 	// Example : This is the center around which the crates will spawn, Sector B island on Tavi. //Coords Sector Center
+
+// Box spawn on Marker: (aktiv)
 _spawnCenter = getmarkerpos "sec_center"; 			// Use this if you want the global center of the map, it's declared in mission.sqm, island specific
+
 _min = 1; 											// minimum distance from the center position (Number) in meters
 _max = 50; 											// Example : maximum range of spawned crates, to keep them INSIDE the sector B compound
 
@@ -20,7 +25,7 @@ _shoremode = 0; 	// 0: does not have to be at a shore , 1: must be at a shore
 _marker = false; 	// Draw a green circle in which the crate will be spawned randomly
 _markersize = 5; 	// Radius of the marker in meters
 
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ****************************** Configurate END ********************************* */
 
 
 diag_log format['***[Sector] Starting Spawncrates.sqf***'];
@@ -49,7 +54,7 @@ for "_i" from 1 to _numberofcrates do
 	_box setVariable ["permaLoot",true];							//stay until reset
 	_box allowDamage false;											// Prevent boxes to explode when spawning
 	
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ******************************Configurate START********************************* */
 	
 	_box addWeaponCargoGlobal ["m107Tan_EPOCH",  				(random 1)];
 	_box addWeaponCargoGlobal ["AKM_EPOCH", 					(random 1)];
@@ -93,6 +98,6 @@ for "_i" from 1 to _numberofcrates do
 // without random: 
 // _box addBackpackCargoGlobal ["B_Carryall_ocamo",  	1 				  ];
 	
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ****************************** Configurate END ********************************* */
   }
 };

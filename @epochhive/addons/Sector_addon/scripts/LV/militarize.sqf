@@ -1,9 +1,11 @@
 /*
-	File: 		Sector_addon mili
-	Author: 	GBR Suppe
-	Update: 	04.05.2015
-	Version: 	0.0.1c
+	File: 		Sector_addon militarize.sqf
+	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
+	Edition: 	GBR Suppe edition
+	Update: 	06.05.2015
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
+	
+		***Configurate start in Line 128 !!!***
 */
 if (!isServer)exitWith{};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
@@ -125,9 +127,8 @@ if((_men select 0)||(_men select 1))then{
 		_unit = _milGroup createUnit [_unitType, _pos, [], 0, "NONE"];
 		_unit setPos _pos;
 		
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ******************************Configurate START********************************* */
 
-		_unit setSkill 0.7;
 		_unit forceAddUniform "U_OG_leader";
 		_unit addVest "V_34_EPOCH";
 				
@@ -135,13 +136,13 @@ if((_men select 0)||(_men select 1))then{
 		_unit addMagazines [("30Rnd_9x21_Mag"), 6];
 		_unit addPrimaryWeaponItem "optic_Arco";
 		
-	_unit setBehaviour "CARELESS";
-	_unit setCombatMode "RED";   		//"BLUE";
-	_unit enableAI "TARGET";
-	_unit enableAI "AUTOTARGET";
-	_unit enableAI "FSM";
+/* ****************************** Configurate END ********************************* */
+		
+		_unit setCombatMode "RED";   		//"BLUE";
+		_unit enableAI "TARGET";
+		_unit enableAI "AUTOTARGET";
+		_unit enableAI "FSM";
 
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 		
 		if(!_still)then{
 			if(_unitType in _menArray)then{

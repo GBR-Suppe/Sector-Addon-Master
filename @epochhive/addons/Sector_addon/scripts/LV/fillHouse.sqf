@@ -1,9 +1,11 @@
 /*
-	File: 		Sector_addon fillHouse
-	Author: 	GBR Suppe
-	Update: 	04.05.2015
-	Version: 	0.0.1c
+	File: 		Sector_addon fillHouse.sqf
+	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
+	Edition: 	GBR Suppe edition
+	Update: 	06.05.2015
 	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
+	
+		***Configurate start in Line 103 !!!***
 */
 if (!isServer)exitWith{};
 private ["_blueMenArray3","_blueMenArray2","_BLUarrays","_redMenArray2","_OPFarrays","_greenMenArray","_grpId","_customInit","_center","_skls","_skills","_a","_buildings","_rat","_milHQ","_milGroup","_menArray","_i","_newPos","_i2","_unitType","_unit","_building","_sideOption","_blueMenArray","_redMenArray","_bPoss","_patrol","_pFile","_pType"];
@@ -98,9 +100,8 @@ while{_i2 < _rat}do{
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
 	_unit setpos _newPos;
 	
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
+/* ******************************Configurate START********************************* */
 	
-	_unit setSkill 0.7;
 	_unit forceAddUniform "U_OG_Guerilla1_1";
 	_unit addVest "V_22_EPOCH";
 				
@@ -108,13 +109,13 @@ while{_i2 < _rat}do{
 	_unit addMagazines [("30Rnd_9x21_Mag"), 6];
 	_unit addPrimaryWeaponItem "optic_Arco";
 	
-	_unit setBehaviour "CARELESS";
+/* ****************************** Configurate END ********************************* */
+	
 	_unit setCombatMode "RED";   //"BLUE";
 	_unit enableAI "TARGET";
 	_unit enableAI "AUTOTARGET";
 	_unit enableAI "FSM";
 
-// configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // configurate ! // 
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 
