@@ -2,21 +2,19 @@
 	ARMA3Alpha function LV_fnc_fullAirVehicle v1.0 - by SPUn / lostvar
 	Spawns random vehicle full of random units and returns driver 
 	
-	File: 		Sector_addon fullair
+	File: 		Sector_addon fullAirVehicle
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
 	Edition:	GBR Suppe edition
-	Update: 	06.05.2015
-	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_INDhq","_INDgrp","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_pos1","_veh1","_vehSpots","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];
 _pos = _this select 0;
 _side = _this select 1;
 
-diag_log "***[Sector] Spawn the Heli***";
+diag_log "***[Sector] Spawn Sector Heli***";
 
 _BLUveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
 _OPFveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
-_INDveh = ["B_Heli_Transport_01_F"];
+_INDveh = [Heli];
 
 _men = [];
 _veh = [];

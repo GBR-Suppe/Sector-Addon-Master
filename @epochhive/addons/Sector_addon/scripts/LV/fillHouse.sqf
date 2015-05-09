@@ -2,15 +2,11 @@
 	File: 		Sector_addon fillHouse.sqf
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
 	Edition: 	GBR Suppe edition
-	Update: 	06.05.2015
-	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
-	
-		***Configurate start in Line 103 !!!***
 */
 if (!isServer)exitWith{};
 private ["_blueMenArray3","_blueMenArray2","_BLUarrays","_redMenArray2","_OPFarrays","_greenMenArray","_grpId","_customInit","_center","_skls","_skills","_a","_buildings","_rat","_milHQ","_milGroup","_menArray","_i","_newPos","_i2","_unitType","_unit","_building","_sideOption","_blueMenArray","_redMenArray","_bPoss","_patrol","_pFile","_pType"];
 
-diag_log "***[Sector] Spawned FillHouse Guards***";
+diag_log "***[Sector] Spawn Sector FillHouse Guards***";
 
 _center = if (count _this > 0) then { _this select 0;};	 
 _sideOption = if (count _this > 1) then { _this select 1;} else {2};	 
@@ -100,23 +96,17 @@ while{_i2 < _rat}do{
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
 	_unit setpos _newPos;
 	
-/* ******************************Configurate START********************************* */
-	
-	_unit forceAddUniform "U_OG_Guerilla1_1";
-	_unit addVest "V_22_EPOCH";
-				
-	_unit addWeapon "SMG_02_F";
-	_unit addMagazines [("30Rnd_9x21_Mag"), 6];
-	_unit addPrimaryWeaponItem "optic_Arco";
-	
-/* ****************************** Configurate END ********************************* */
-	
+	_unit forceAddUniform uniformFH;
+	_unit addVest vestFH;
+	_unit addWeapon weaponFH;
+	_unit addMagazines [(magazineFH), magazinesFH];
+	_unit addPrimaryWeaponItem opticFH;
+
 	_unit setCombatMode "RED";   //"BLUE";
 	_unit enableAI "TARGET";
 	_unit enableAI "AUTOTARGET";
 	_unit enableAI "FSM";
 
-	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 
 	if(_patrol)then{
@@ -150,4 +140,5 @@ if(!isNil("_grpId"))then{
 	}forEach _this;
 	call compile format["LVgroup%1CI = ['fillhouse',%2]",_grpId,_thisArray];
 };
-
+/* ******************************Configuration START********************************* */
+/* ****************************** Configuration END ********************************* */

@@ -3,32 +3,28 @@
 	Author: NedFox [TZW]
 	Description: Custom Crates, randomly placed around a marker.
 	Edit: GBR Suppe edition	
+	
+	Configurate the Loot in LINE 52 !
 */
 if (isServer) then {
 
-/* ******************************Configurate START********************************* */
-
-_numberofcrates = 1;								// this is the number of crates that you want to spawn
+diag_log format['***[Sector] Spawn crates***'];
 
 // Box spawn on Coordiantes: (not aktiv)								
-//_spawnCenter = [16529.719,18420.574,34.364796]; 	// Example : This is the center around which the crates will spawn, Sector B island on Tavi. //Coords Sector Center
+// Example : This is the center around which the crates will spawn, Sector B island on Tavi. //Coords Sector Center
+//_spawnCenter = [16529.719,18420.574,34.364796];
 
 // Box spawn on Marker: (aktiv)
-_spawnCenter = getmarkerpos "sec_center"; 			// Use this if you want the global center of the map, it's declared in mission.sqm, island specific
+_spawnCenter = getmarkerpos boxspawnposi;
+_numberofcrates = noc;
+_min = mini;
+_max = maxi;
+_water = watermode;	
+_marker = marker;
+_markersize = markers;
 
-_min = 1; 											// minimum distance from the center position (Number) in meters
-_max = 50; 											// Example : maximum range of spawned crates, to keep them INSIDE the sector B compound
-
-_mindist = 2; 		// minimum distance from the nearest object (Number) in meters, ie. spawn at least this distance away from anything within x meters..
-_water = 0;			// water mode (Number)	0: cannot be in water , 1: can either be in water or not , 2: must be in water
-_shoremode = 0; 	// 0: does not have to be at a shore , 1: must be at a shore
-_marker = false; 	// Draw a green circle in which the crate will be spawned randomly
-_markersize = 5; 	// Radius of the marker in meters
-
-/* ****************************** Configurate END ********************************* */
-
-
-diag_log format['***[Sector] Starting Spawncrates.sqf***'];
+_shoremode = 0; 				// 0: does not have to be at a shore , 1: must be at a shore
+_mindist = 2; 					// minimum distance from the nearest object (Number) in meters, ie. spawn at least this distance away from anything within x meters..
 
 for "_i" from 1 to _numberofcrates do
   {
@@ -54,7 +50,7 @@ for "_i" from 1 to _numberofcrates do
 	_box setVariable ["permaLoot",true];							//stay until reset
 	_box allowDamage false;											// Prevent boxes to explode when spawning
 	
-/* ******************************Configurate START********************************* */
+/* ******************************Configuration START********************************* */
 	
 	_box addWeaponCargoGlobal ["m107Tan_EPOCH",  				(random 1)];
 	_box addWeaponCargoGlobal ["AKM_EPOCH", 					(random 1)];
@@ -98,6 +94,6 @@ for "_i" from 1 to _numberofcrates do
 // without random: 
 // _box addBackpackCargoGlobal ["B_Carryall_ocamo",  	1 				  ];
 	
-/* ****************************** Configurate END ********************************* */
+/* ****************************** Configuration END ********************************* */
   }
 };

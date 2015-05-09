@@ -4,8 +4,6 @@
 	File: 		Sector_addon fullWaterVehicle
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
 	Edition:	GBR Suppe edition
-	Update: 	06.05.2015
-	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_veh1","_vehSpots","_pos1","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];
 _pos = _this select 0;
@@ -15,7 +13,7 @@ diag_log "***[Sector] Spawn the WaterVehicle***";
 
 _BLUveh = ["B_Boat_Transport_01_F"];
 _OPFveh = ["O_Lifeboat"];
-_INDveh = ["C_Boat_Civil_01_rescue_EPOCH"];
+_INDveh = [Boot];
 
 _men = [];
 _veh = [];
@@ -71,4 +69,3 @@ if(_vehSpots > 0)then{
 
 _driver = driver _vehicle;
 _driver
-

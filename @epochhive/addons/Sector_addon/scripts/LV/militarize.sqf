@@ -2,10 +2,6 @@
 	File: 		Sector_addon militarize.sqf
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
 	Edition: 	GBR Suppe edition
-	Update: 	06.05.2015
-	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
-	
-		***Configurate start in Line 128 !!!***
 */
 if (!isServer)exitWith{};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
@@ -14,7 +10,7 @@ private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir
 _smokesAndChems = true;
 _doorHandling = true;
 //
-diag_log "***[Sector] Spawned Sector Guards***";
+diag_log "***[Sector] Spawn Sector Militarize Guards***";
 
 _cPos = if(count _this > 0)then{_this select 0;};
 _side = if (count _this > 1) then { _this select 1; }else{2;};
@@ -124,26 +120,21 @@ if((_men select 0)||(_men select 1))then{
 				};
 			};
 		};
+		
 		_unit = _milGroup createUnit [_unitType, _pos, [], 0, "NONE"];
 		_unit setPos _pos;
 		
-/* ******************************Configurate START********************************* */
+		_unit forceAddUniform uniformM;
+		_unit addVest vestM;
+		_unit addWeapon weaponM;
+		_unit addMagazines [(magazineM), magazinesM];
+		_unit addPrimaryWeaponItem opticM;
 
-		_unit forceAddUniform "U_OG_leader";
-		_unit addVest "V_34_EPOCH";
-				
-		_unit addWeapon "SMG_02_F";
-		_unit addMagazines [("30Rnd_9x21_Mag"), 6];
-		_unit addPrimaryWeaponItem "optic_Arco";
-		
-/* ****************************** Configurate END ********************************* */
-		
 		_unit setCombatMode "RED";   		//"BLUE";
 		_unit enableAI "TARGET";
 		_unit enableAI "AUTOTARGET";
 		_unit enableAI "FSM";
 
-		
 		if(!_still)then{
 			if(_unitType in _menArray)then{
 				nul = [_unit,_cPos,_radius,_doorHandling] execVM "\x\addons\Sector_addon\scripts\LV\patrol-vD.sqf";
@@ -291,3 +282,5 @@ if(_smokesAndChems)then{
 	};
 };
 };
+/* ******************************Configurate START********************************* */
+/* ****************************** Configurate END ********************************* */

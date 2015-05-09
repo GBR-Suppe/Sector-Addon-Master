@@ -4,18 +4,16 @@
 	File: 		Sector_addon fullLandV
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
 	Edition:	GBR Suppe edition
-	Update: 	05.05.2015
-	Edit: 		IF YOU EDIT SOMETHING YOUR NAME HERE
 */
 private ["_BLUhq","_BLUgrp","_veh","_grp","_OPFhq","_OPFgrp","_INDhq","_INDgrp","_roads","_radius","_pos1","_man1","_man","_i","_pos","_side","_BLUveh","_OPFveh","_INDveh","_men","_veh1","_vehSpots","_roadFound","_vehicle","_vCrew","_allUnitsArray","_crew","_driver"];
 _pos = _this select 0;
 _side = _this select 1;
 
-diag_log "***[Sector] Spawn the LandVehicle***";
+diag_log "***[Sector] Spawn Sector LandVehicle***";
 
 _BLUveh = ["B_MRAP_01_F"];
 _OPFveh = ["O_MBT_02_cannon_F"];
-_INDveh = ["B_MRAP_01_EPOCH"];
+_INDveh = [LandV];
 
 _men = [];
 _veh = [];
