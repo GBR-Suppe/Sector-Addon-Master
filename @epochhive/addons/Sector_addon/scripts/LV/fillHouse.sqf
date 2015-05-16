@@ -30,7 +30,7 @@ _BLUarrays = [_blueMenArray,_blueMenArray2,_blueMenArray3];
 _redMenArray = ["O_Soldier_A_F"];
 _redMenArray2 = ["O_recon_exp_F"];
 _OPFarrays = [_redMenArray,_redMenArray2];
-_greenMenArray = ["C_man_polo_1_F"];
+_greenMenArray = ["I_Soldier_02_F"];
 
 switch (_sideOption) do { 
     case 1: {

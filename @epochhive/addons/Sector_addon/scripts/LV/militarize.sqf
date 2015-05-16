@@ -56,13 +56,13 @@ _allUnitsArray = [];
 
 _blueMenArray = ["B_Soldier_A_F"];
 _redMenArray = ["O_Soldier_A_F"];
-_greenMenArray = ["C_man_polo_1_F"];
+_greenMenArray = ["I_Soldier_02_F"];
 
 _yellowMenArray = ["C_man_shorts_4_F_asia"];
 
 _BLUdivers = ["B_diver_F"];
 _OPFdivers = ["O_diver_F"];
-_INDdivers = ["C_man_polo_1_F"];
+_INDdivers = ["I_Soldier_02_F"];
 
 _yellowCarArray = ["C_Quadbike_01_F"];
 
