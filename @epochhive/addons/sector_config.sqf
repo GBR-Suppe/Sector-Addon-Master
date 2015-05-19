@@ -35,7 +35,7 @@ vestFH = "V_22_EPOCH";				// Vest FillHouse Units
 
 
 // Vehicle options:
-spawnHeli = true;						// false to disable the Helispawn, true to activate the Helispawn
+spawnHeli = true;						// false to disable the Helispawn, true to activate the Helispawn // INFO FOR INFISTAR: open run.sqf and at the Heli to the allowed vehicle list
 Heli = "B_Heli_Transport_01_F";			// Helityp [default is "B_Heli_Transport_01_F" = "ghosthawk"]
 spawnLand = false;						// false to disable the LandVehiclespawn, true to activate the LandVehiclespawn  *INFO: LandVehicle and Boot is not really tested, only true if you now what you do !
 LandV = "B_MRAP_01_EPOCH";				// LandVehicletyp [default is "B_MRAP_01_EPOCH" = "hunter"]  *INFO: LandVehicle and Boot is not really tested, only true if you now what you do !
