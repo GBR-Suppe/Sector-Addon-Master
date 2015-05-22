@@ -1,7 +1,7 @@
 /*
 	File: 		Sector_addon fillHouse.sqf
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
-	Edition: 	GBR Suppe edition
+	Edition: 	Suppe edition
 */
 if (!isServer)exitWith{};
 private ["_blueMenArray3","_blueMenArray2","_BLUarrays","_redMenArray2","_OPFarrays","_greenMenArray","_grpId","_customInit","_center","_skls","_skills","_a","_buildings","_rat","_milHQ","_milGroup","_menArray","_i","_newPos","_i2","_unitType","_unit","_building","_sideOption","_blueMenArray","_redMenArray","_bPoss","_patrol","_pFile","_pType"];
@@ -30,7 +30,7 @@ _BLUarrays = [_blueMenArray,_blueMenArray2,_blueMenArray3];
 _redMenArray = ["O_Soldier_A_F"];
 _redMenArray2 = ["O_recon_exp_F"];
 _OPFarrays = [_redMenArray,_redMenArray2];
-_greenMenArray = ["I_Soldier_02_F"];
+_greenMenArray = ["I_Soldier_EPOCH"];
 
 switch (_sideOption) do { 
     case 1: {
@@ -96,16 +96,18 @@ while{_i2 < _rat}do{
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
 	_unit setpos _newPos;
 	
-	_unit forceAddUniform uniformFH;
-	_unit addVest vestFH;
-	_unit addWeapon weaponFH;
-	_unit addMagazines [(magazineFH), magazinesFH];
-	_unit addPrimaryWeaponItem opticFH;
+	_unit forceAddUniform SUP_uniformFH;
+	_unit addVest SUP_vestFH;
+	_unit addWeapon SUP_weaponFH;
+	_unit addMagazines [(SUP_magazineFH), SUP_magazinesFH];
+	_unit addPrimaryWeaponItem SUP_opticFH;
 
 	_unit setCombatMode "RED";   //"BLUE";
 	_unit enableAI "TARGET";
 	_unit enableAI "AUTOTARGET";
 	_unit enableAI "FSM";
+	_unit enableAI "MOVE";
+	_unit enableAI "ANIM";
 
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 

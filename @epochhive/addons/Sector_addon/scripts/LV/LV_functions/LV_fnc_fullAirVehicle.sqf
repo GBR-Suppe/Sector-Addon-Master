@@ -14,7 +14,7 @@ diag_log "***[Sector] Spawn Sector Heli***";
 
 _BLUveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
 _OPFveh = ["B_Heli_Transport_03_unarmed_EPOCH"];
-_INDveh = [Heli];
+_INDveh = [SUP_Heli];
 
 _men = [];
 _veh = [];
@@ -46,10 +46,9 @@ _vehSpots = getNumber (configFile >> "CfgVehicles" >> _veh1 >> "transportSoldier
 
 _vehicle = createVehicle [_veh1, _pos1, [], 0, "FLY"];
 _vehicle setVariable ["BIS_enableRandomization", false];
-
 _vehicle call EPOCH_server_setVToken;
 _vehicle call EPOCH_server_vehicleInit;
-
+_vehicle lock 2;
 
 _vCrew = [_vehicle, _grp] call BIS_fnc_spawnCrew;
 

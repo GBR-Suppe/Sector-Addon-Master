@@ -2,7 +2,7 @@
 	File: spawncrates.sqf
 	Author: NedFox [TZW]
 	Description: Custom Crates, randomly placed around a marker.
-	Edit: GBR Suppe edition	
+	Edit: Suppe edition	
 	
 	Configurate the Loot in LINE 52 !
 */
@@ -15,13 +15,13 @@ diag_log format['***[Sector] Spawn crates***'];
 //_spawnCenter = [16529.719,18420.574,34.364796];
 
 // Box spawn on Marker: (aktiv)
-_spawnCenter = getmarkerpos boxspawnposi;
-_numberofcrates = noc;
-_min = mini;
-_max = maxi;
-_water = watermode;	
-_marker = marker;
-_markersize = markers;
+_spawnCenter = getmarkerpos SUP_boxspawnposi;
+_numberofcrates = SUP_noc;
+_min = SUP_mini;
+_max = SUP_maxi;
+_water = SUP_watermode;	
+_marker = SUP_marker;
+_markersize = SUP_markers;
 
 _shoremode = 0; 				// 0: does not have to be at a shore , 1: must be at a shore
 _mindist = 2; 					// minimum distance from the nearest object (Number) in meters, ie. spawn at least this distance away from anything within x meters..

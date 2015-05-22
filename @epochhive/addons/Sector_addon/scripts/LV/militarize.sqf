@@ -1,7 +1,7 @@
 /*
 	File: 		Sector_addon militarize.sqf
 	Author: 	SPUn / lostvar    http://forums.bistudio.com/showthread.php?165089-AI-Spawn-Script-Pack
-	Edition: 	GBR Suppe edition
+	Edition: 	Suppe edition
 */
 if (!isServer)exitWith{};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
@@ -56,13 +56,13 @@ _allUnitsArray = [];
 
 _blueMenArray = ["B_Soldier_A_F"];
 _redMenArray = ["O_Soldier_A_F"];
-_greenMenArray = ["I_Soldier_02_F"];
+_greenMenArray = ["I_Soldier_EPOCH"];
 
-_yellowMenArray = ["C_man_shorts_4_F_asia"];
+_yellowMenArray = ["I_Soldier_02_F"];
 
-_BLUdivers = ["B_diver_F"];
-_OPFdivers = ["O_diver_F"];
-_INDdivers = ["I_Soldier_02_F"];
+_BLUdivers = ["I_Soldier_EPOCH"];
+_OPFdivers = ["I_Soldier_EPOCH"];
+_INDdivers = ["I_Soldier_EPOCH"];
 
 _yellowCarArray = ["C_Quadbike_01_F"];
 
@@ -123,17 +123,19 @@ if((_men select 0)||(_men select 1))then{
 		
 		_unit = _milGroup createUnit [_unitType, _pos, [], 0, "NONE"];
 		_unit setPos _pos;
-		
-		_unit forceAddUniform uniformM;
-		_unit addVest vestM;
-		_unit addWeapon weaponM;
-		_unit addMagazines [(magazineM), magazinesM];
-		_unit addPrimaryWeaponItem opticM;
+
+		_unit forceAddUniform SUP_uniformM;
+		_unit addVest SUP_vestM;
+		_unit addWeapon SUP_weaponM;
+		_unit addMagazines [(SUP_magazineM), SUP_magazinesM];
+		_unit addPrimaryWeaponItem SUP_opticM;
 
 		_unit setCombatMode "RED";   		//"BLUE";
 		_unit enableAI "TARGET";
 		_unit enableAI "AUTOTARGET";
 		_unit enableAI "FSM";
+		_unit enableAI "MOVE";
+		_unit enableAI "ANIM";
 
 		if(!_still)then{
 			if(_unitType in _menArray)then{

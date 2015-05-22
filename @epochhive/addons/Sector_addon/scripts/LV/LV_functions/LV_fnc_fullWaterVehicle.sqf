@@ -13,7 +13,7 @@ diag_log "***[Sector] Spawn the WaterVehicle***";
 
 _BLUveh = ["B_Boat_Transport_01_F"];
 _OPFveh = ["O_Lifeboat"];
-_INDveh = [Boot];
+_INDveh = [SUP_Boot];
 
 _men = [];
 _veh = [];
@@ -48,7 +48,6 @@ _pos1 = _pos;
 
 _vehicle = createVehicle [_veh1, _pos1, [], 0, "NONE"];
 _vehicle setVariable ["BIS_enableRandomization", false];
-
 _vehicle call EPOCH_server_setVToken;
 _vehicle call EPOCH_server_vehicleInit;
 _vehicle setPos _pos1;

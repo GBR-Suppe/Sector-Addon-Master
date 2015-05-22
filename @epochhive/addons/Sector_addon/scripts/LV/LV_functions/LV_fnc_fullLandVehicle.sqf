@@ -13,7 +13,7 @@ diag_log "***[Sector] Spawn Sector LandVehicle***";
 
 _BLUveh = ["B_MRAP_01_F"];
 _OPFveh = ["O_MBT_02_cannon_F"];
-_INDveh = [LandV];
+_INDveh = [SUP_LandV];
 
 _men = [];
 _veh = [];
@@ -60,9 +60,9 @@ sleep 0.5;
 
 _vehicle = createVehicle [_veh1, _pos, [], 0, "NONE"];
 _vehicle setVariable ["BIS_enableRandomization", false];
-
 _vehicle call EPOCH_server_setVToken;
 _vehicle call EPOCH_server_vehicleInit;
+_vehicle lock 2;
 
 _vehicle setPos _pos;
 
