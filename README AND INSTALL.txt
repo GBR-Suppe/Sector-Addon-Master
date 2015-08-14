@@ -16,7 +16,7 @@ Features:
 
 
 Download:
-https://github.com/G...or-Addon-Master
+https://github.com/GBR-Suppe/Sector-Addon-Master
 
 
 Installation and Settings:
